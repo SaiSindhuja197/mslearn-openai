@@ -40,7 +40,7 @@ Bem-vindo ao laboratório "Introdução ao OpenAI e criação de soluções de l
 
 Uma vez pronto para começar, sua máquina virtual e o guia do laboratório estarão ao seu alcance diretamente no seu navegador web.
 
-![Acesse sua VM e Guia do Laboratório](../media/getting-started-portuguese-openai-1.png)
+![Acesse sua VM e Guia do Laboratório](../media/upd-2.png)
 
 ### Guia de laboratório Aumentar/diminuir zoom
 
@@ -56,25 +56,25 @@ Sua máquina virtual é seu principal recurso durante o workshop. O guia do labo
 
 Para entender melhor seus recursos e credenciais de laboratório, navegue até a tab **Ambiente**.
 
-![Acesse sua VM e Guia do Laboratório](../media/getting-started-portuguese-openai-2.png)
+![Acesse sua VM e Guia do Laboratório](../media/upd-3.png)
 
 ### Utilizando o Recurso de Janela Dividida
 
 Para conveniência, você pode abrir o tab do laboratório em uma janela separada selecionando o botão **Janela Dividida** no canto superior direito.
 
-![Acesse sua VM e Guia do Laboratório](../media/getting-started-portuguese-openai-5.png)
+![Acesse sua VM e Guia do Laboratório](../media/upd-0.png)
 
 ### Gerenciando Sua Máquina Virtual
 
 Sinta-se à vontade para **iniciar, parar ou reiniciar (2)** sua máquina virtual conforme necessário na tab **Recursos (1)**. Sua experiência está nas suas mãos!
 
-![Acesse sua VM e Guia do Laboratório](../media/getting-started-portuguese-openai-3.png)
+![Acesse sua VM e Guia do Laboratório](../media/upd-4.png)
 
 ### Validação de laboratório
 
 Após concluir a tarefa, clique no botão **Validar** na aba Validation integrada ao seu guia de laboratório. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa, caso contrário, leia atentamente a mensagem de erro e repita a etapa, seguindo as instruções no guia de laboratório.
 
-![Acesse sua VM e Guia do Laboratório](../media/getting-started-portuguese-openai-4.png)
+![Acesse sua VM e Guia do Laboratório](../media/upd-5.png)
 
 ## Vamos Começar com o Portal do Azure
 
@@ -86,17 +86,17 @@ Após concluir a tarefa, clique no botão **Validar** na aba Validation integrad
 
    - **Email/Usuário:** <inject key="AzureAdUserEmail"></inject>
 
-       ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(6).png)
+       ![Acesse sua VM e Guia do Laboratório](../media/upd-6.png)
 
 3. Em seguida, forneça sua senha/password:
 
    - **Senha:** <inject key="AzureAdUserPassword"></inject>
 
-       ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(7).png)
+       ![Acesse sua VM e Guia do Laboratório](../media/upd-7.png)
 
 4. Se for solicitado para permanecer conectado, você pode clicar em **Não**.
 
-    ![Acesse sua VM e Guia do Laboratório](../media/8-10-24(8).png)
+    ![Acesse sua VM e Guia do Laboratório](../media/upd-8.png)
 
 5. Se uma janela pop-up **Bem-vindo ao Microsoft Azure** aparecer, simplesmente clique em **Cancelar** para pular o tour.
 
@@ -114,6 +114,6 @@ Contatos de Suporte para Alunos:
 
 Agora, clique em **Próximo** no canto inferior direito para passar para a próxima página.
 
-![Acesse sua VM e Guia do Laboratório](../media/8-10-24(9).png)
+![Acesse sua VM e Guia do Laboratório](../media/upd-9.png)
 
 ## Votos de bom treinamento!
