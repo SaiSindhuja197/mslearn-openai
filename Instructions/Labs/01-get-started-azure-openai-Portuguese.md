@@ -189,7 +189,7 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
       ![](../media/upd-29.png)
 
-3. Na seção **Configuração**, clique na caixa **Adicionar seção** e, em seguida, clique em **Exemplos**.
+1. Na seção **Configuração**, clique na caixa **Adicionar seção** e, em seguida, clique em **Exemplos**.
 
       ![](../media/upd-30.png)
 
@@ -236,7 +236,7 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
       ![](../media/upd-36.png)
 
-2. **Envie (2)** a seguinte mensagem na sessão de chat **(1)**
+1. **Envie (2)** a seguinte mensagem na sessão de chat **(1)**
 
       ```
       Escreva três questões de múltipla escolha com base no texto a seguir.
@@ -252,11 +252,11 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
       ![](../media/upd-37.png)      
 
-3. Revise os resultados, que devem consistir em perguntas de múltipla escolha que um professor poderia usar para testar os alunos sobre os tópicos de visão computacional no prompt. A resposta total deve ser menor do que o comprimento máximo especificado como parâmetro.
+1. Revise os resultados, que devem consistir em perguntas de múltipla escolha que um professor poderia usar para testar os alunos sobre os tópicos de visão computacional no prompt. A resposta total deve ser menor do que o comprimento máximo especificado como parâmetro.
 
       ![](../media/upd-38.png)
 
-4. Observe o seguinte sobre o prompt e os parâmetros que você usou:
+1. Observe o seguinte sobre o prompt e os parâmetros que você usou:
 
     - O prompt especifica que a saída desejada deve ser três perguntas de múltipla escolha.
     
