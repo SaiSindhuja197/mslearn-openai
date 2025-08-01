@@ -56,7 +56,7 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
 
    ![](../media/31-7-25-l3-6.png)
 
-1. Dentro do painel **Montar conta de armazenamento**, selecione **Eu quero criar uma conta de armazenamento (1)** e clique em **Avancar (2)**.
+1. Dentro do painel **Montar conta de armazenamento**, selecione **Eu quero criar uma conta de armazenamento (1)** e clique em **Avançar (2)**.
 
    ![](../media/31-7-25-l3-7.png)
 
@@ -556,4 +556,4 @@ Neste laboratório, você realizou o seguinte:
 - Implementou um modelo OpenAI dentro do estúdio Azure OpenAI
 - Integrou modelos Azure OpenAI em suas aplicações
 
-### Você completou com sucesso o laboratório.
+### Você concluiu com sucesso o Laboratório Prático.
