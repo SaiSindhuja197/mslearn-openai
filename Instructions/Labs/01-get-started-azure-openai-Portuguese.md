@@ -98,7 +98,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Clique em **Implantar (7)**
       
-      ![](../media/upd-18.png)
+      ![](../media/upd-18-new.png)
 
 1. Clique na seta para trás no modelo recém-criado e selecione **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
 
