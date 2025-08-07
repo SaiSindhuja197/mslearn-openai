@@ -1,78 +1,78 @@
-# Laboratório 01: Iniciar com o Serviço Azure OpenAI
+# Laboratório 01: Começar com o Serviço Azure OpenAI
 
 ### Duração Estimada: 120 Minutos
 
 ## Cenário do Laboratório
-O Serviço Azure OpenAI traz os modelos de IA generativa desenvolvidos pela OpenAI para a plataforma Azure, permitindo que você desenvolva soluções de IA poderosas que se beneficiam da segurança, escalabilidade e integração dos serviços fornecidos pela plataforma de nuvem Azure. Neste exercício, você aprenderá como começar a usar o Azure OpenAI provisionando o serviço como um recurso do Azure e usando o Azure AI Foundry portal para implantar e explorar modelos OpenAI.
+Neste laboratório, você aprenderá como começar a usar o OpenAI do Azure, provisionando o serviço como um recurso do Azure e utilizando o portal Azure AI Foundry para implantar e explorar modelos OpenAI. O serviço OpenAI do Azure integra os modelos de IA generativa desenvolvidos pela OpenAI à plataforma Azure, permitindo que você desenvolva soluções de IA robustas que se beneficiam da segurança, escalabilidade e integração de serviços oferecidos pela plataforma de nuvem do Azure.
 
 ## Objetivos do Laboratório
 Neste laboratório, você completará as seguintes tarefas:
 
 - Tarefa 1: Provisionar um recurso Azure OpenAI
 - Tarefa 2: Implantar um modelo
-- Tarefa 3: Explorar um modelo no playground de Completações
+- Tarefa 3: Explorar um modelo no playground de Conclusões
 - Tarefa 4: Usar o playground de Chat
 - Tarefa 5: Explorar prompts e parâmetros
 - Tarefa 6: Explorar a geração de código
 
 ## Tarefa 1: Provisionar um recurso Azure OpenAI
 
-Antes de usar os modelos do Azure OpenAI, você deve provisionar um recurso Azure OpenAI na sua assinatura do Azure.
+Nesta tarefa, você criará um recurso no portal do Azure, selecionando o serviço OpenAI e configurando definições como a região e a camada de preço. Esta configuração permite integrar os modelos de linguagem avançados da OpenAI em suas aplicações.
 
-1. No **portal do Azure**, pesquise por **Azure OpenAI (1)** e selecione **OpenAI (2)**.
+1. No **portal do Azure**, pesquise por **OpenAI do Azure (1)** e selecione **OpenAI do Azure (2)**.
 
    ![](../media/upd-1.png)
 
-2. Na tela **Azure AI Foundry | OpenAI**, clique em **+ Criar**.
+2. Na tela **AI Foundry | OpenAI**, clique em **+ Criar**.
 
    ![](../media/upd-10.png)
 
-3. Crie um recurso **Azure OpenAI** com as seguintes configurações e Clique em **Próxima (6)** três vezes:
+3. Crie um recurso **OpenAI do Azure** com as seguintes configurações e clique em **Próxima (6)** três vezes:
    
     - Assinatura: Padrão - Assinatura pré-atribuída **(1)**
     - Grupo de recursos: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     - Região:  **<inject key="Region" enableCopy="false" /> (3)**
     - Nome: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
-    - Tipo de preço: **Standard S0 (5)**
+    - Faixa de preços: **Standard S0 (5)**
   
       ![](../media/upd-11.png)
 
-4. Clique em **Criar**.
+4. Na aba, **Examinar + enviar**, clique em **Criar**.
 
    ![](../media/upd-12.png)
 
-5. Aguarde a conclusão da implementação. Depois, vá para o recurso Azure OpenAI implementado através do portal de Azure.
+5. Aguarde a conclusão da implantação e, em seguida, acesse o recurso implantado a partir do painel de notificações.
 
 #### Validação
 
-> **Parabéns** por completar a tarefa! Agora é hora de validá-la. Aqui estão os passos:
-> - Clique no botão Validar para a tarefa correspondente. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa. 
+> **Parabéns** por concluir a tarefa! Agora, é hora de validá-la. Siga os passos:
+> - Clique no botão Validar para a tarefa correspondente. Se receber uma mensagem de sucesso, você pode prosseguir para a próxima tarefa. 
 > - Caso contrário, leia atentamente a mensagem de erro e tente novamente seguindo as instruções do guia do laboratório.
-> - Se precisar de assistência, entre em contato conosco pelo cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudar você.
+> - Se precisar de auxílio, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
 
    <validation step="1fa0e87b-eb46-463d-b63b-edf6e2282e16" />
 
-## Tarefa 2: Implementar um modelo
+## Tarefa 2: Implantar um modelo
 
-O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry portal**, que você pode usar para Implementar, gerenciar e explorar modelos. Você começará sua exploração do Azure OpenAI usando o Azure AI Foundry portal para Implementar um modelo.
+Nesta tarefa, você implantará uma instância de modelo de IA específica dentro do seu recurso OpenAI do Azure para integrar capacidades avançadas de linguagem em suas aplicações.
 
-1. No **portal do Azure**, pesquise por **OpenAI (1)** e selecione **OpenAI (2)**.
+1. No **portal do Azure**, pesquise por **OpenAI do Azure(1)** e selecione **OpenAI do Azure (2)**.
 
    ![](../media/upd-1.png)
 
-1. Na tela **Azure AI Foundry | OpenAI**, selecione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. Na tela **AI Foundry | OpenAI**, selecione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**
 
    ![](../media/upd-13.png)
 
-1. No painel de recursos do Azure OpenAI, clique em **Go to Azure AI Foundry portal** para navegar até o **Azure AI Foundry portal**.
+1. Na página do recurso do OpenAI do Azure, clique em **Go to Azure AI Foundry portal** para navegar até o **portal Azure AI Foundry**.
 
     ![](../media/upd-14.png)
 
-1. Clique em **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
+1. Na página do **portal Azure AI Foundry**, clique em **Implantações (1)** em **Recursos compartilhados** no painel à esquerda. Em seguida, clique em **+ Implante o Modelo (2)**, escolha **Implantar o modelo básico (3)**.  
 
    ![](../media/upd-15.png)
 
-1. Na janela **Selecionar um modelo**, procure por **gpt-4o-mini (1)** selecione **gpt-4o-mini (2)** e clique em **Confirmar (3)**.
+1. Na janela **Selecione um modelo**, pesquise por **gpt-4o-mini (1)**, selecione **gpt-4o-mini (2)** e, em seguida, clique em **Confirmar (3)**.
 
    ![](../media/upd-16.png)
 
@@ -80,9 +80,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
 
    ![](../media/upd-17.png)
 
-1. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
-    
-    - Na interface pop-up do modelo de implantação, insira os seguintes detalhes:
+1. Na interface pop-up **Implantar o modelo**, insira os seguintes detalhes:
     
     - Nome da implantação: **my-gpt-model (1)**
 
@@ -92,7 +90,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Limite de Taxa de Tokens por Minuto: **8K (4)**
 
-    - Filtro de conteudo: **DefaultV2 (5)** 
+    - Filtro de conteúdo: **DefaultV2 (5)** 
     
     - Habilitar cota dinâmica: **Habilitado (6)**
     
@@ -100,11 +98,11 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
       
       ![](../media/upd-18-new.png)
 
-1. Clique na seta para trás no modelo recém-criado e selecione **Implantações (1)** no painel de navegação à esquerda, clique em **+ Implante o modelo (2)**, selecione **Implantar o modelo básico (3)**.  
+1. No painel à esquerda, em **Recursos compartilhados**, selecione **Implantações (1)**. Em seguida, clique em **+ Implante o modelo (2)** e escolha **Implantar o modelo básico (3)**.  
 
    ![](../media/upd-15.png)
 
-1. Na janela **Selecionar um modelo**, procure por **gpt-35-turbo-instruct (1)**, selecione **gpt-35-turbo-instruct (2)** e clique em **Confirmar (3)**.
+1. Na janela **Selecione um modelo**, pesquise por **gpt-35-turbo-instruct (1)**, selecione **gpt-35-turbo-instruct (2)** e clique em **Confirmar (3)**.
 
       ![](../media/upd-19.png)
 
@@ -112,7 +110,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
 
    ![](../media/upd-20.png)
    
-1. Na interface de **Implantar o modelo**, insira os seguintes detalhes:
+1. Na interface pop-up **Implantar o modelo**, insira os seguintes detalhes:
     
     - Nome da implantação: **gpt-35-turbo-instruct (1)**
 
@@ -122,7 +120,7 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
     
     - Limite de Taxa de Tokens por Minuto: **20K (4)**
 
-    - Filtro de conteudo: **DefaultV2 (5)**  
+    - Filtro de conteúdo: **DefaultV2 (5)**  
     
     - Habilitar cota dinâmica: **Habilitado (6)**
     
@@ -130,52 +128,52 @@ O Azure OpenAI fornece um portal baseado na web chamado **Azure AI Foundry porta
       
          ![](../media/upd-21.png)
 
-1. Eles implantarão modelos que você pode experimentar tanto para tarefas de bate-papo quanto para tarefas de conclusão à medida que avança.
+1. Isso implantará os modelos com os quais você poderá experimentar tanto em tarefas de chat quanto de conclusão ao longo do laboratório.
 
       > **Observação**: você pode ignorar qualquer erro relacionado à atribuição de funções para visualizar os limites de cota.
 
 #### Validação
 
-> **Parabéns** por completar a tarefa! Agora é hora de validá-la. Aqui estão os passos:
-> - Clique no botão Validar para a tarefa correspondente. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa. 
+> **Parabéns** por concluir a tarefa! Agora, é hora de validá-la. Siga os passos:
+> - Clique no botão Validar para a tarefa correspondente. Se receber uma mensagem de sucesso, você pode prosseguir para a próxima tarefa. 
 > - Caso contrário, leia atentamente a mensagem de erro e tente novamente seguindo as instruções do guia do laboratório.
-> - Se precisar de assistência, entre em contato conosco pelo cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudar você.
+> - Se precisar de auxílio, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
 
    <validation step="3b4a472e-f956-45d8-b828-3e2cc01c2e88" />
 
-## Tarefa 3: Explorar um modelo no playground de Completações
+## Tarefa 3: Explorar um modelo no playground de Conclusões
 
-Os *Playgrounds* são interfaces úteis no Azure AI Foundry portal que você pode usar para experimentar seus modelos implementados sem precisar desenvolver a sua aplicação cliente.
+Os *Playgrounds* são interfaces úteis no portal do Azure AI Foundry que você pode usar para experimentar seus modelos implantados sem precisar desenvolver a sua aplicação cliente. Nesta tarefa, você explorará um modelo no playground de Conclusões, interagindo com o modelo de IA para testar e refinar suas respostas usando exemplos de entrada e saída em tempo real.
 
 1. No Azure OpenAI Foundry, no painel esquerdo em **Playgrounds**, selecione **Conclusões**.
 
    ![](../media/upd-22.png)
 
-2. Na página **Conclusões**, certifique-se de que sua implantação **gpt-35-turbo-instruct (1)** esteja selecionada, digite `Gerar um questionário de 5 perguntas Para cada pergunta, forneça as opções de resposta e a resposta correta (2)` no campo prompt e clique em **Generate (3)**.
+2. Na página **Conclusões**, certifique-se de que sua implantação **gpt-35-turbo-instruct (1)** esteja selecionada, digite `Gerar um questionário de 5 perguntas. Para cada pergunta, forneça as opções de resposta e a resposta correta (2)` no campo prompt e clique em **Generate (3)**.
 
       ![](../media/upd-23.png)
 
-      > **Observação:** O exemplo de texto resumido consiste em um *prompt* que fornece algum texto para informar ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
+      > **Observação:** O exemplo de texto consiste em um *prompt* que informa ao modelo que tipo de resposta é necessária e inclui algumas informações contextuais.
 
 3. A resposta consiste em um questionário baseado no exemplo do prompt.
 
       ![](../media/upd-24.png)
 
->**Nota** : O resultado do chat pode variar. A captura de tela é fornecida apenas para referência e pode não refletir exatamente o mesmo resultado.
+>**Nota** : O resultado da saída do chat pode variar. A captura de tela é fornecida apenas para referência e pode não refletir exatamente o mesmo resultado.
 
-   >**Observação**: Você pode usar o botão **Regenerar** para reenviar o prompt (novas alterações foram feitas) e observe que a resposta pode ser diferente da original. Um modelo generativo de IA pode produzir uma nova linguagem cada vez que é chamado.
+   >**Observação**: Você pode usar o botão **Regenerate** para reenviar o prompt (caso novas alterações tenham sido feitas)  e observar que a resposta pode variar da original. Um modelo de IA generativa pode produzir uma nova linguagem a cada vez que é chamado.
 
-4. Na parte inferior da página, anote o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt – essencialmente palavras ou partes de palavras no texto.
+4. Na parte inferior da página, observe o número de *tokens* detectados no texto. Tokens são as unidades básicas de um prompt – essencialmente, palavras ou partes de palavras no texto.
 
-5. Use o botão **Visualizar código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. O prompt contém o texto que você enviou ao modelo. A solicitação é enviada à API *Completions* do seu serviço Azure OpenAI.
+5. Use o botão **Exibir código** para visualizar o código que um aplicativo cliente usaria para enviar o prompt. Você pode selecionar sua linguagem de programação preferida. A requisição é enviada para a API *Conclusões* do seu serviço Azure OpenAI.
 
       ![](../media/upd-25.png)
 
       ![](../media/upd-26.png)
 
-6. Feche o **Código de Amostra**.
+6. Feche a janela **Sample Code(Código de Amostra)** após revisar o conteúdo.
 
-## Tarefa 4: Use o playground de Chat
+## Tarefa 4: Usar o playground de Chat
 
 O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e superiores. Ele usa a API *ChatCompletions* em vez da antiga API *Completions*.
 
@@ -183,7 +181,7 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
    ![](../media/upd-27.png)
 
-1. Na seção **Configuração**, na caixa **Forneça instruções e contexto ao modelo**, substitua o texto atual pela seguinte afirmação: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA (1)`, clique em **Aplique as alterações (2)** e clique em **Continuar (3)**.
+1. Na seção **Configuração**, na caixa **Forneça as instruções e o contexto do modelo**, substitua o texto atual pela seguinte afirmação: `O sistema é um professor de IA que ajuda as pessoas a aprender sobre IA (1)`, clique em **Aplicar alterações (2)** e confirme selecionando **Continuar (3)** na solicitação.
 
       ![](../media/upd-28.png)
 
@@ -197,37 +195,37 @@ O playground *Chat* fornece uma interface de chatbot para os modelos GPT 3.5 e s
 
     - **Usuário**: `Quais são os diferentes tipos de inteligência artificial?`
     
-    - **Assistente**: `Existem três tipos principais de inteligência artificial: IA estreita ou fraca (como assistentes virtuais como Siri ou Alexa, software de reconhecimento de imagem e filtros de spam), IA geral ou forte (IA projetada para ser tão inteligente quanto um ser humano. Este tipo da IA ​​não existe atualmente e é puramente teórica) e Superinteligência Artificial (IA que é mais inteligente do que qualquer ser humano e pode realizar tarefas que estão além da compreensão humana. Este tipo de IA também é puramente teórica e ainda não foi desenvolvida) .`
+    - **Assistente**: `Existem três tipos principais de inteligência artificial: IA Restrita ou Fraca (como assistentes virtuais como Siri ou Alexa, software de reconhecimento de imagem e filtros de spam), IA Geral ou Forte (IA projetada para ser tão inteligente quanto um ser humano. Este tipo de IA não existe atualmente e é puramente teórico), e Superinteligência Artificial (IA que é mais inteligente que qualquer ser humano e pode realizar tarefas que estão além da compreensão humana. Este tipo de IA também é puramente teórico e ainda não foi desenvolvido).`
 
       ![](../media/upd-31.png)
 
-      > **Nota**: Exemplos de poucos-tiros são usados para fornecer ao modelo exemplos dos tipos de respostas esperadas. O modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
+      > **Nota**: Exemplos few-shot(demonstrações com poucos exemplos) são usados para fornecer ao modelo um direcionamento sobre o tipo de resposta esperada. Assim, o modelo tentará refletir o tom e o estilo dos exemplos em suas próprias respostas.
   
-1. Salve as alterações clicando em **Aplicar alterações** e posteriormente clique em **Continuar** para iniciar uma nova sessão e definir o contexto comportamental do sistema de chat.
+1. Clique em **Aplicar alterações** e depois em **Continuar** para inicializar uma nova sessão com o contexto atualizado.
 
       ![](../media/upd-32.png)
 
-1. Na caixa de consulta na parte inferior da página, digite o texto `O que é inteligência artificial? (1)`. Use o botão **Enviar (2)** para enviar a mensagem e visualizar a resposta.
+1. Na caixa de consulta na parte inferior da página, digite o texto `O que é inteligência artificial? (1)`. Use o botão **Enviar (2)** para submeter a mensagem e ver a resposta.
 
      ![](../media/upd-33.png)
 
       > **Observação**: você pode receber uma resposta informando que a implantação da API ainda não está pronta. Nesse caso, aguarde alguns minutos e tente novamente.
 
-1. Revise a resposta.
+1. Analise a resposta.
 
    ![](../media/upd-34.png)
 
-1. envie a seguinte mensagem para continuar a conversa: `Como isso está relacionado ao aprendizado de máquina?`
+1. Após analisar a resposta, envie a seguinte mensagem de acompanhamento: `Como isso está relacionado ao aprendizado de máquina?`
 
-1. Revise a resposta, observando que o contexto da interação anterior é retido (para que o modelo entenda que “isso” se refere à inteligência artificial).
+1. Revise a nova resposta, observando que o contexto da interação anterior é mantido (para que o modelo entenda que “isso” se refere à inteligência artificial).
 
-1. Use o botão **Ver código** para visualizar o código da interação. O prompt consiste na mensagem do *sistema*, nos exemplos rápidos de mensagens do *usuário* e do *assistente* e na sequência de mensagens do *usuário* e do *assistente* na sessão de bate-papo até o momento.
+1. Use o botão **Exibir código** para visualizar o código da interação. O prompt consiste na mensagem do *sistema*, nos exemplos rápidos de mensagens de *usuário* e *assistente*, e na sequência de mensagens da sessão de chat até o momento.
 
       ![](../media/upd-35.png)
 
-## Tarefa 5: Explore prompts e parâmetros
+## Tarefa 5: Explorar prompts e parâmetros
 
-Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gerar a resposta que você precisa.
+Nesta tarefa, você explorará prompts e parâmetros, experimentando diferentes entradas e configurações para ajustar as respostas e o comportamento do modelo de IA.
 
 1. No painel **Configuração**, selecione **Parâmetros (1)**, defina os seguintes valores de parâmetro:
 
@@ -239,20 +237,20 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 1. **Envie (2)** a seguinte mensagem na sessão de chat **(1)**
 
       ```
-      Escreva três questões de múltipla escolha com base no texto a seguir.
+      Escreva três perguntas de múltipla escolha com base no seguinte texto.
       
-      A maioria das soluções de visão computacional é baseada em modelos de aprendizado de máquina que podem ser aplicados à entrada visual de câmeras, vídeos ou imagens.
+      A maioria das soluções de visão computacional baseia-se em modelos de aprendizado de máquina que podem ser aplicados a entradas visuais de câmeras, vídeos ou imagens.
       
-      - A classificação de imagens envolve o treinamento de um modelo de aprendizado de máquina para classificar imagens com base em seu conteúdo. Por exemplo, em uma solução de monitoramento de tráfego você pode usar um modelo de classificação de imagens para classificar imagens com base no tipo de veículo que elas contêm, como táxis, ônibus, ciclistas e assim por diante.
+      - A classificação de imagens envolve o treinamento de um modelo de aprendizado de máquina para classificar imagens com base em seu conteúdo. Por exemplo, em uma solução de monitoramento de tráfego, você pode usar um modelo de classificação de imagens para classificar imagens com base no tipo de veículo que elas contêm, como táxis, ônibus, ciclistas e assim por diante.
       
-      - Os modelos de aprendizado de máquina para detecção de objetos são treinados para classificar objetos individuais em uma imagem e identificar sua localização com uma caixa delimitadora. Por exemplo, uma solução de monitoramento de tráfego pode usar a detecção de objetos para identificar a localização de diferentes classes de veículos.
+      - Os modelos de aprendizado de máquina de detecção de objetos são treinados para classificar objetos individuais dentro de uma imagem e identificar sua localização com uma caixa delimitadora (*bounding box*). Por exemplo, uma solução de monitoramento de tráfego pode usar a detecção de objetos para identificar a localização de diferentes classes de veículos.
       
-      - A segmentação semântica é uma técnica avançada de aprendizado de máquina na qual pixels individuais da imagem são classificados de acordo com o objeto ao qual pertencem. Por exemplo, uma solução de monitoramento de tráfego pode sobrepor imagens de tráfego com camadas de “máscara” para destacar diferentes veículos usando cores específicas.
+      - A segmentação semântica é uma técnica avançada de aprendizado de máquina na qual pixels individuais na imagem são classificados de acordo com o objeto ao qual pertencem. Por exemplo, uma solução de monitoramento de tráfego pode sobrepor imagens de tráfego com camadas de "máscara" para destacar diferentes veículos usando cores específicas.
       ```
 
       ![](../media/upd-37.png)      
 
-1. Revise os resultados, que devem consistir em perguntas de múltipla escolha que um professor poderia usar para testar os alunos sobre os tópicos de visão computacional no prompt. A resposta total deve ser menor do que o comprimento máximo especificado como parâmetro.
+1. Analise os resultados, que devem consistir em perguntas de múltipla escolha que um professor poderia usar para testar alunos sobre os tópicos de visão computacional no prompt. A resposta total deve ser menor do que o comprimento máximo que você esoecificou como parâmetro.
 
       ![](../media/upd-38.png)
 
@@ -260,35 +258,35 @@ Você pode usar o prompt e os parâmetros para maximizar a probabilidade de gera
 
     - O prompt especifica que a saída desejada deve ser três perguntas de múltipla escolha.
     
-    - Os parâmetros incluem *Temperatura*, que controla o grau em que a geração de resposta inclui um elemento de aleatoriedade. O valor de **0** usado na sua submissão minimiza a aleatoriedade, resultando em respostas estáveis e previsíveis.
+    - Os parâmetros incluem a *Temperatura*, que controla o grau de aleatoriedade na geração da resposta. O valor **0** que você utilizou minimiza a aleatoriedade, resultando em respostas estáveis e previsíveis.
 
-## Tarefa 6: Explore a geração de código
+## Tarefa 6: Explorar a geração de código
 
-Além de gerar respostas em linguagem natural, você pode usar modelos GPT para gerar código.
+Além de gerar respostas em linguagem natural, você pode usar modelos GPT para gerar código. Nesta tarefa, você explorará a geração de código testando a capacidade do modelo de IA de gerar e sugerir trechos de código com base em vários prompts e requisitos de programação.
 
-1. No **painel Configuração**, em **Mensagem do sistema**, insira a mensagem do sistema: `Você é um desenvolvedor Python. (1)` e salve as alterações clicando em **Aplicar alterações (2)** e clique em **Continuar** quando solicitado.
+1. No **painel Configuração**, na caixa **Forneça as instruções e o contexto do modelo**, insira a mensagem do sistema: `Você é um desenvolvedor Python. (1)` e salve as alterações clicando em **Aplicar alterações (2)** e clique em **Continuar** quando solicitado.
   
       ![](../media/upd-39.png)
 
-1. No painel **Sessão de chat**, clique no ícone **limpar** e selecione **Limpar** para limpar o histórico de chat e iniciar uma nova sessão.
+1. No painel da **Sessão de chat**, selecione o botão **Limpar chat** e, em seguida, selecione **Limpar** na janela pop-up para limpar o histórico do chat e iniciar uma nova sessão.
 
       ![](../media/upd-40.png)
 
 1. Envie a seguinte mensagem do usuário:
 
     ```
-    Write a Python function named Multiply that multiplies two numeric parameters.
+    Crie uma função em Python chamada Multiplicar que receba dois parâmetros numéricos e retorne a multiplicação entre eles.
     ```
     
-1. Revise a resposta, que deve incluir um código Python de exemplo que atenda ao requisito no prompt.
+1. Analise o trecho de código Python gerado. O modelo deve retornar uma definição de função válida que multiplica duas entradas e retorna o resultado.
 
      ![](../media/upd-41.png)
 
 ## Resumo
 
-Neste laboratório, você completou o seguinte:
-- Provisionou um recurso Azure OpenAI
-- Implementou um modelo Azure OpenAI dentro do estúdio Azure OpenAI
-- Usou o playground de chat para utilizar as funcionalidades de prompts, parâmetros e geração de código
+Neste laboratório:
+- Você provisionou um recurso do Serviço OpenAI do Azure para integrar capacidades de IA generativa em suas aplicações.
+- Implantou dois modelos usando o portal Azure AI Foundry.
+- Explorou os modelos nos playgrounds de Completions e Chat, experimentou com prompts e parâmetros, e testou as capacidades de geração de código do modelo.
 
-### Você completou com sucesso o laboratório.
+#### Você completou com sucesso o laboratório. Clique em Próximo >> para prosseguir com o próximo laboratório.
