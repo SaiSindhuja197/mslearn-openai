@@ -1,72 +1,135 @@
-# Laboratório 02: Use SDKs do Azure OpenAI na sua Aplicação
+# Laboratório 02: Usar os SDKs do Azure OpenAI na sua Aplicação
 
 ### Duração Estimada: 120 Minutos
 
 ## Cenário do laboratório
-No cenário deste exercício, você desempenhará o papel de um desenvolvedor de software que foi encarregado de implementar uma aplicação que pode usar IA generativa para ajudar a fornecer recomendações de caminhadas. As técnicas usadas no exercício podem ser aplicadas a qualquer aplicação que queira usar as APIs do Azure OpenAI.
 
-Com o Serviço Azure OpenAI, os desenvolvedores podem criar chatbots, modelos de linguagem e outras aplicações que se destacam na compreensão da linguagem humana natural. O Azure OpenAI fornece acesso a modelos de IA pré-treinados, bem como um conjunto de APIs e ferramentas para personalizar e ajustar esses modelos para atender aos requisitos específicos da sua aplicação. Neste exercício, você aprenderá como implementar um modelo no Azure OpenAI e usá-lo na sua aplicação.
+Com o serviço Azure OpenAI, desenvolvedores podem criar chatbots, modelos de linguagem e outras aplicações com alto desempenho na compreensão da linguagem natural humana. O Azure OpenAI oferece acesso a modelos de IA pré-treinados, além de um conjunto de APIs e ferramentas para personalização e ajuste fino desses modelos conforme os requisitos específicos da sua aplicação. Neste exercício, você aprenderá como implantar um modelo no Azure OpenAI e utilizá-lo em sua própria aplicação.
+
+No cenário deste exercício, você desempenhará o papel de um desenvolvedor de software que foi encarregado de implementar uma aplicação que pode usar IA generativa para ajudar a fornecer recomendações de trilhas. As técnicas usadas no exercício podem ser aplicadas a qualquer aplicação que queira usar as APIs do Azure OpenAI.
 
 ## Objetivos do laboratório
-Neste laboratório, você completará as seguintes tarefas:
+Neste laboratório, você realizará as seguintes tarefas:
 
 - Tarefa 1: Provisionar um recurso Azure OpenAI
-- Tarefa 2: Configurar uma aplicação no Cloud Shell
-- Tarefa 3: Configurar a sua aplicação
-- Tarefa 4: Executar a sua aplicação
+- Tarefa 2: Implantar um modelo
+- Tarefa 3: Configurar uma aplicação no Cloud Shell
+- Tarefa 4: Configurar a sua aplicação
+- Tarefa 5: Executar a sua aplicação
 
 ## Tarefa 1: Provisionar um recurso Azure OpenAI
 
-Antes de poder usar os modelos Azure OpenAI, você deve provisionar um recurso Azure OpenAI em sua assinatura do Azure.
+Antes de utilizar os modelos do Azure OpenAI, você deve provisionar um recurso Azure OpenAI em sua assinatura do Azure.
 
-1. No **portal do Azure**, pesquise por **Azure OpenAI (1)** e selecione **OpenAI (2)**.
+1. No **portal do Azure**, pesquise por **OpenAI do Azure (1)** e selecione **OpenAI do Azure (2)**.
 
    ![](../media/31-7-25-l3-1.png)
 
-1. Na página **Azure AI Services**, certifique-se de que **Azure OpenAI (1)** esteja selecionado na lâmina esquerda. Em seguida, selecione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
+1. Na página **AI Foundry**, certifique-se de que **OpenAI (1)** esteja selecionado no painel esquerdo. Em seguida, selecione **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2)**.
 
    ![](../media/31-7-25-l3-2.png)
 
-1. Para capturar os valores de Chaves e Endpoints, na lâmina **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**:
+1. Agora, capture os valores de Chaves e Endpoints, no painel **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>**:
 
-      - Selecione **Chaves e Ponto de extremidade (1)** sob **Gerenciamento de Recursos**.
+      - Selecione **Chaves e Ponto de extremidade (1)** na seção **Gerenciamento de Recursos**.
       - Clique em **Mostrar as Chaves (2)**.
-      - Copie a **CHAVE 1 (3)** e certifique-se de colá-la em um editor de texto como o Bloco de Notas para referência futura.
-      - Finalmente, copie a URL da API do **Ponto de extremidade (4)** clicando em copiar para a área de transferência. Cole-a em um editor de texto como o Bloco de Notas para uso posterior.
+      - Copie a **CHAVE 1 (3)** e salve-a em um editor de texto (como o Bloco de Notas) para referência futura.
+      - Copie também o **Ponto de extremidade (4)** clicando no ícone de copiar para a área de transferência. Guarde esse valor para uso posterior.
 
         ![](../media/31-7-25-l3-3.png)
 
-## Tarefa 2: Configurar uma aplicação no Cloud Shell
+#### Validação
 
-Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação de linha de comandos que é executada no Cloud Shell no Azure. Abra uma nova guia do navegador para trabalhar com o Cloud Shell.
+> **Parabéns** por concluir a tarefa! Agora, é hora de validá-la. Siga os passos:
+> - Clique no botão Validar para a tarefa correspondente. Se receber uma mensagem de sucesso, você pode prosseguir para a próxima tarefa. 
+> - Caso contrário, leia atentamente a mensagem de erro e tente novamente seguindo as instruções do guia do laboratório.
+> - Se precisar de auxílio, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
+
+   <validation step="6b7e8754-7031-45fb-a340-762578ad9685" />
+        
+### Task 2: Implantar um modelo
+
+Para utilizar a API do Azure OpenAI, é necessário implantar um modelo por meio do Azure AI Foundry. Após a implantação, esse modelo será referenciado pela sua aplicação.
+
+1. No **portal do Azure**, pesquise por **OpenAI do Azure** e selecione **OpenAI do Azure**.
+
+   ![](../media/openai8.png)
+
+2. No painel **AI Foundry | Azure OpenAI**, selecione **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+
+   ![](../media/OpenAI_select.png)
+
+3. No painel do recurso Azure OpenAI, clique em **Go to Azure AI Foundry portal**. Você será redirecionado para o **portal do Azure AI Foundry**.
+
+   ![](../media/openai_studio1.png)
+
+4. Ao acessar o Azure AI Foundry, clique no pop-up **Explorar a nova experiência** exibido no topo da página.
+
+   ![](../media/explore_new-exp.jpg)
+
+5. No menu de navegação à esquerda, clique em **Implantações (1)**, depois clique em **+ Implante o modelo** , escolha **Implantar o modelo básico (2)**.  
+
+   ![](../media/deploy-2.jpg)
+
+6. Na janela **Selecione o modelo**, pesquise por **gpt-35-turbo-16k (1)** e clique em **Confirmar (2)**.
+
+   ![](../media/new4.png)
+
+7. Na interface de pop-up **Implantar o modelo**, insira os seguintes detalhes:
+    
+    - **Nome da implantação**: text-turbo (1) 
+    - **Versão do modelo**: 0613(Default) (2)
+    - **Tipo de implantação**: Standard (3)
+    - **Limite de Taxa de Tokens por Minuto**: 10K (4)
+    - **Habilitar cota dinâmica**: Habilitado (5)
+    - Clique em **Implantar** (6)
+  
+      ![](../media/new2.png)
+
+8. O modelo será implantado e estará pronto para uso nas etapas seguintes.
+
+   > **Observação**:Você pode ignorar a notificação “Falha ao obter informações da cota de implantações”.
+   
+   > **Note**: Cada modelo do Azure OpenAI é otimizado para diferentes equilíbrios entre capacidade e desempenho. Neste laboratório, utilizaremos a série **GPT-3.5 Turbo**, que oferece excelente compreensão de linguagem natural. Embora este exercício utilize apenas um modelo, o processo de implantação e uso se aplica igualmente a outros modelos disponíveis.
+
+#### Validação
+
+> **Parabéns** por concluir a tarefa! Agora, é hora de validá-la. Siga os passos:
+> - Clique no botão Validar para a tarefa correspondente. Se receber uma mensagem de sucesso, você pode prosseguir para a próxima tarefa. 
+> - Caso contrário, leia atentamente a mensagem de erro e tente novamente seguindo as instruções do guia do laboratório.
+> - Se precisar de auxílio, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
+
+## Tarefa 3: Configurar uma aplicação no Cloud Shell
+
+Para demonstrar como integrar um modelo do Azure OpenAI, utilizaremos uma aplicação de linha de comando que será executada no Cloud Shell do Azure. Abra uma nova aba no navegador para trabalhar com o Cloud Shell.
 
 1. No [portal do Azure](https://portal.azure.com?azure-portal=true), selecione o botão **[>_]** (*Cloud Shell*) na parte superior da página à direita da caixa de pesquisa. Um painel do Cloud Shell será aberto na parte inferior do portal.
 
     ![](../media/31-7-25-l3-4.png)
 
-    > **Nota:** Se você não conseguir encontrar o Cloud Shell, clique nas **reticências (...) (1)** e selecione **Cloud Shell (2)** no menu.
+    > **Observação:** Se você não conseguir encontrar o Cloud Shell, clique nas **reticências (...) (1)** e selecione **Cloud Shell (2)** no menu.
 
       ![](../media/31-7-25-l3-10.png)
    
-1. Na primeira vez que você abrir o Cloud Shell, você pode ser solicitado a escolher o tipo de shell que deseja usar (*Bash* ou *PowerShell*). Selecione **Bash**. Se você não vir esta opção, pule o passo.
+1. Ao acessar o Cloud Shell pela primeira vez, será solicitado que escolha o tipo de shell: *Bash* ou *PowerShell*. Selecione **Bash**. Se essa opção não for exibida, siga para o próximo passo.
 
    ![](../media/31-7-25-l3-5.png)
 
-1. Dentro do painel Começando, selecione **Montar conta de armazenamento (1)**, selecione sua **Assinatura da conta de armazenamento (2)** no menu suspenso e clique em **Aplicar (3)**.
+1. No painel **Introdução**, selecione **Montar conta de armazenamento (1)**, escolha sua **Assinatura da conta de armazenamento (2)** na lista e clique em **Aplicar (3)**.
 
    ![](../media/31-7-25-l3-6.png)
 
-1. Dentro do painel **Montar conta de armazenamento**, selecione **Eu quero criar uma conta de armazenamento (1)** e clique em **Avançar (2)**.
+1. Na janela de montagem da **conta de armazenamento**, selecione **Eu quero criar uma conta de armazenamento (1)** e clique em **Avançar (2)**.
 
    ![](../media/31-7-25-l3-7.png)
 
-1. Dentro do painel **Configurações avançadas**, insira os seguintes detalhes:
+1. Na tela de **Configurações avançadas**, insira os seguintes dados:
 
-    - Assinatura: Default- Escolha a única assinatura existente atribuída para este laboratório **(1)**
+    - Assinatura: Escolha a única disponível atribuída para este laboratório **(1)**
     - Grupo de recursos: Selecione Usar existente **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     - Região: **<inject key="Region" enableCopy="false" /> (3)**
     - Nome da Conta de armazenamento: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
-    - Comp. de arquivos: Crie um novo compartilhamento de arquivo chamado **none (5)**
+    - Compartilhamento de arquivos: Crie um novo com o nome **nenhum (5)**
     - Clique em **Criar (6)**
 
         ![](../media/31-7-25-l3-8.png)
@@ -106,10 +169,10 @@ Para mostrar como integrar com um modelo Azure OpenAI, usaremos uma aplicação 
    
 #### Validação
 
-> **Parabéns** por completar a tarefa! Agora, é hora de validá-la. Aqui estão os passos:
-> - Clique no botão Validar para a tarefa correspondente. Se você receber uma mensagem de sucesso, pode prosseguir para a próxima tarefa. 
-> - Caso contrário, leia atentamente a mensagem de erro e tente novamente o passo, seguindo as instruções no guia do laboratório.
-> - Se precisar de alguma assistência, por favor, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
+> **Parabéns** por concluir a tarefa! Agora, é hora de validá-la. Siga os passos:
+> - Clique no botão Validar para a tarefa correspondente. Se receber uma mensagem de sucesso, você pode prosseguir para a próxima tarefa. 
+> - Caso contrário, leia atentamente a mensagem de erro e tente novamente seguindo as instruções do guia do laboratório.
+> - Se precisar de auxílio, entre em contato conosco em cloudlabs-support@spektrasystems.com. Estamos disponíveis 24/7 para ajudá-lo.
 
    <validation step="bd2f25c6-d67e-4553-a8ed-32e9f0162e26" />
 
