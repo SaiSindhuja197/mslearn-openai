@@ -84,7 +84,6 @@ Nesta tarefa, você vai configurar um ambiente de desenvolvimento usando o Azure
    rm -r mslearn-openai -f
    git clone https://github.com/microsoftlearning/mslearn-openai mslearn-openai
     ```
-
      ![](../media/31-7-25-l3-11.png)
   
 1. Os arquivos serão baixados para a pasta chamada **mslearn-openai**. Navegue até os arquivos deste exercício usando o seguinte comando.
@@ -100,9 +99,7 @@ Nesta tarefa, você vai configurar um ambiente de desenvolvimento usando o Azure
     ```bash
     code .
     ```
-
-    ![](../media/8-10-24(49).png)
-   
+     
 #### Validação
 
 > **Parabéns** por concluir a tarefa! Agora, é hora de validá-la. Siga os passos:
@@ -114,11 +111,11 @@ Nesta tarefa, você vai configurar um ambiente de desenvolvimento usando o Azure
 
 ## Tarefa 3: Configurar sua aplicação
 
-Neste exercício, você completará algumas partes essenciais da aplicação para permitir o uso do seu recurso do Azure OpenAI.
+Nesta tarefa, você irá configurar a aplicação para se conectar ao recurso do Azure OpenAI. Você vai atualizar os arquivos de configuração com as credenciais do seu ambiente e implementar a lógica do cliente para interagir com o modelo implantado.
 
-1. No editor de código, expanda a pasta **CSharp** ou **Python**, dependendo da sua preferência de linguagem.
+1. No editor de código, expanda a pasta **CSharp** ou **Python**, dependendo da sua linguagem de preferência.
 
-1. Se você estiver usando a linguagem **C#**, abra o arquivo **CSharp.csproj**, substitua-o pelo código a seguir e **salve** o arquivo.
+1. Se você estiver usando a linguagem **C#**, abra o arquivo **CSharp.csproj**, substitua seu conteúdo pelo código a seguir e **salve** o arquivo.
 
    ```
    <Project Sdk="Microsoft.NET.Sdk">
@@ -147,13 +144,13 @@ Neste exercício, você completará algumas partes essenciais da aplicação par
 
     ![](../media/31-7-25-l3-12.png)
 
-1. Abra o arquivo de configuração para sua linguagem
+1. Abra o arquivo de configuração para a sua linguagem:
 
     - C#: `appsettings.json`
     
     - Python: `.env`
     
-1. Atualize os valores de configuração para incluir o **Ponto de extremidade** e a **chave** do recurso Azure OpenAI que você criou, bem como o nome do modelo que você implantou, `text-turbo`. Em seguida, salve o arquivo clicando com o botão direito sobre ele no painel esquerdo e pressionando **Salvar**
+1. Atualize os valores de configuração para incluir o **Ponto de extremidade** e a **chave** do recurso Azure OpenAI que você criou, bem como o nome do modelo que você implantou, `my-get-model`. Em seguida, salve o arquivo clicando com o botão direito sobre ele no painel esquerdo e pressionando **Salvar**.
 
     - **C#:**
      
@@ -163,9 +160,9 @@ Neste exercício, você completará algumas partes essenciais da aplicação par
      
       ![](../media/nlp27.png)
 
-      > **Observação:** Você pode obter o ponto de extremidade do Azure OpenAI e os valores da chave na seção Chaves e Ponto de extremidade do recurso do Azure OpenAI em Gerenciamento de recursos.
+      > **Observação:** Você pode obter os valores de ponto de extremidade e chave do Azure OpenAI na seção Chaves e Ponto de extremidade do seu recurso, em Gerenciamento de Recursos.
 
-1. Navegue até a pasta da sua linguagem de preferência e instale os pacotes necessários:
+1. Volte para o Cloud Shell e instale os pacotes necessários para a sua linguagem de preferência.
 
    **C#:**
 
@@ -183,7 +180,7 @@ Neste exercício, você completará algumas partes essenciais da aplicação par
     pip install python-dotenv openai==1.65.2 --user
     ```
 
-1. Navegue até a pasta da sua linguagem e substitua o comentário **Adicionar pacote do OpenAI do Azure** adicionando as bibliotecas necessárias.
+1. Navegue até a pasta da sua linguagem de preferência e, no arquivo correspondente, substitua o comentário  **Add Azure OpenAI packages** pelo código que adiciona a biblioteca do SDK do Azure OpenAI.
 
     **C#:** Program.cs
 
@@ -198,13 +195,13 @@ Neste exercício, você completará algumas partes essenciais da aplicação par
     **Python:** application.py
 
     ```python
-    # Add Azure OpenAI package
+    # Add Azure OpenAI packages
     from openai import AsyncAzureOpenAI
     ```
 
       ![](../media/31-7-25-l3-15.png)   
 
-1. No código da aplicação, localize o comentário **Configurar o cliente OpenAI do Azure** e adicione o código para configurar o cliente OpenAI do Azure:
+1. No código da aplicação, localize o comentário **Configure the Azure OpenAI client** e adicione o código para configurar o cliente do Azure OpenAI.
 
     **C#:** Program.cs
 
@@ -229,9 +226,9 @@ Neste exercício, você completará algumas partes essenciais da aplicação par
 
       ![](../media/31-7-25-l3-16.png)   
 
-      >**Observação:** Verifique e corrija a indentação do código após colá-lo. Muitas vezes, espaços extras são adicionados e precisam ser removidos.
+      >**Observação:** Certifique-se de indentar o código corretamente, eliminando quaisquer espaços em branco extras após colá-lo no editor.
 
-1. Na função que chama o **modelo OpenAI do Azure**, no comentário **Obter resposta do OpenAI do Azure**, adicione o código para formatar e enviar a solicitação para o modelo.
+1. Na função que chama o **modelo do Azure OpenAI**, sob o comentário **Get response from Azure OpenAI**, adicione o código para formatar e enviar a requisição ao modelo.
 
     **C#**: Program.cs
     ```csharp
@@ -458,23 +455,25 @@ Neste exercício, você completará algumas partes essenciais da aplicação par
           asyncio.run(main())
       ```
 
-1. Para salvar as alterações feitas no arquivo, clique com o botão direito sobre ele no painel esquerdo da janela de código e pressione **Salvar**.
+1. Para salvar as alterações, clique com o botão direito em um espaço em branco no editor de texto do arquivo e selecione **Salvar**.
 
    >**Observação:** Certifique-se de indentar o código eliminando quaisquer espaços em branco extras após colá-lo no editor de código.
 
-## Tarefa 5: Executar sua aplicação
+## Tarefa 4: Testar sua aplicação
 
-Agora que sua aplicação foi configurada, basta executá-la para enviar sua solicitação ao seu modelo e observar a resposta. 
+Nesta tarefa, você executará a aplicação e interagirá com o modelo do Azure OpenAI usando diferentes prompts de sistema e de usuário. Este teste prático ajudará você a observar como as variações no prompt afetam o resultado do modelo.
 
-1. No painel do terminal interativo, garanta que o contexto da pasta seja o da sua linguagem de preferência. Em seguida, insira o seguinte comando para executar a aplicação.
+1. Na pasta da sua linguagem de preferência, abra o arquivo **system.txt**. Para cada uma das interações, você inserirá a **Mensagem de sistema** neste arquivo e o salvará. O programa fará uma pausa a cada execução para que você possa alterar a mensagem de sistema.
+
+1. No painel do terminal interativo, certifique-se de que você está no diretório da sua linguagem de preferência. Em seguida, digite o seguinte comando para executar a aplicação.
 
     - **C#:** `dotnet run`
     
     - **Python:** `python application.py`
 
-      > **Dica**: Você pode usar o ícone **Maximizar tamanho do painel** (**^**) na barra de ferramentas do terminal para ver mais texto do console.
+      > **Dica**: Você pode usar o ícone **Maximizar tamanho do painel** (**^**) na barra de ferramentas do terminal para ver mais texto no console.
 
-1. No terminal, ele solicitará que você insira uma chave para continuar.
+1. No terminal, será solicitado que você pressione uma tecla para continuar.
 
    ![](../media/31-7-25-l3-19.png)
 
@@ -483,74 +482,76 @@ Agora que sua aplicação foi configurada, basta executá-la para enviar sua sol
    **System message:**
    
    ```
-   You are an AI assistant
+   Você é um assistente de IA.
    ```
-   > **Nota:** A mensagem do sistema deve ser fornecida em system.txt em C# ou Python. Siga as mesmas etapas para os prompts restantes.
-1. Na mensagem Inserir usuário, dê a seguinte mensagem.
+   > **Observação:** AA mensagem de sistema deve ser inserida no arquivo system.txt em C# ou Python. Siga os mesmos passos para os prompts restantes.
+   
+1. No terminal, para a mensagem de usuário, digite o seguinte:
 
    **User message:**
    
    ```
-   Write an intro for a new wildlife Rescue 
+   Escreva uma introdução para um novo resgate de vida selvagem.
    ```
 
-   >>**Nota:** A mensagem do usuário deve ser fornecida no terminal em C# ou Python. Siga as mesmas etapas para os prompts restantes.
+   >**Observação:** A mensagem do usuário deve ser inserida no terminal em C# ou Python. Siga os mesmos passos para os prompts restantes.
 
-1. Observe a saída. O modelo de IA provavelmente produzirá uma boa introdução genérica a um resgate de vida selvagem.
+1. Observe o resultado. O modelo de IA provavelmente produzirá uma boa introdução genérica para um resgate de vida selvagem.
 
 1. Em seguida, insira os seguintes prompts, que especificam um formato para a resposta:
 
    **System message:**
    
    ```
-   You are an AI assistant helping to write emails
+   Você é um assistente de IA que ajuda a escrever e-mails.
    ```
 
    **User message:**
    
    ```
-   Write a promotional email for a new wildlife rescue, including the following:-Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website
+   Escreva um e-mail promocional para um novo resgate de vida selvagem, incluindo o seguinte: - O nome do resgate é Contoso - É especializado em elefantes - Faça um pedido de doações a serem feitas em nosso site.
    ```
 
-1. Observe a saída. Desta vez, você provavelmente verá o formato de um e-mail com os animais específicos incluídos, bem como o pedido de doações.
+1. Observe o resultado. Desta vez, você provavelmente verá o formato de um e-mail com os animais específicos incluídos, bem como o pedido de doações.
 
-1. Em seguida, insira os seguintes prompts que especificam adicionalmente o conteúdo:
+1. Agora, insira os seguintes prompts, que adicionam mais especificações de conteúdo:
 
    **System message:**
    
    ```
-   You are an AI assistant helping to write emails
+   Você é um assistente de IA que ajuda a escrever e-mails.
    ```
 
    **User message:**
 
    ```
-   Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website - Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.
+   Escreva um e-mail promocional para um novo resgate de vida selvagem, incluindo o seguinte: - O nome do resgate é Contoso - É especializado em elefantes, bem como em zebras e girafas - Faça um pedido de doações a serem feitas em nosso site - Inclua uma lista dos animais que temos atualmente em nosso resgate após a assinatura, em forma de tabela. Estes animais incluem elefantes, zebras, gorilas, lagartos e lebres.
    ```
 
-1. Observe a saída e veja como o e-mail mudou com base em suas instruções claras.
+1. Observe o resultado e veja como o e-mail mudou com base em suas instruções mais claras.
 
-1. Em seguida, insira os seguintes prompts onde adicionamos detalhes sobre o tom à mensagem do sistema:
+1. Por fim, insira os prompts a seguir, nos quais adicionamos detalhes sobre o tom à mensagem de sistema:
 
    **System message:**
    
    ```
-   You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented, and you always include at least two jokes.
+   Você é um assistente de IA que ajuda a escrever e-mails promocionais para gerar interesse em um novo negócio. Seu tom é leve, com um estilo de bate-papo, e você sempre inclui pelo menos duas piadas.
    ```
 
    **User message:**
 
    ```
-   Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website - Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits..
+   Escreva um e-mail promocional para um novo resgate de vida selvagem, incluindo o seguinte: - O nome do resgate é Contoso - É especializado em elefantes, bem como em zebras e girafas - Faça um pedido de doações a serem feitas em nosso site - Inclua uma lista dos animais que temos atualmente em nosso resgate após a assinatura, em forma de tabela. Estes animais incluem elefantes, zebras, gorilas, lagartos e lebres.
    ```
 
-1. Observe a saída. Desta vez, você provavelmente verá o e-mail em um formato semelhante, mas com um tom muito mais informal. Você provavelmente verá até piadas incluídas!
+1. Observe o resultado. Desta vez, você provavelmente verá o e-mail em um formato semelhante, mas com um tom muito mais informal.  É provável que você veja até mesmo as piadas incluídas!
 
-## Revisão
+## Resumo
 
 Neste laboratório, você realizou o seguinte:
-- Provisionou um recurso Azure OpenAI
-- Implementou um modelo OpenAI dentro do estúdio Azure OpenAI
-- Integrou modelos Azure OpenAI em suas aplicações
+- Provisionou um recurso Azure OpenAI para acessar e usar modelos de linguagem através do portal do Azure.
+- Configurou um ambiente de desenvolvimento no Azure Cloud Shell e clonou um repositório de aplicação de exemplo.
+- Configurou a aplicação com suas credenciais do OpenAI e integrou o SDK do Azure OpenAI.
+- Testou a aplicação usando vários prompts e observou como diferentes entradas influenciam as respostas geradas pela IA.
 
-### Você concluiu com sucesso o Laboratório Prático.
+### Você concluiu com sucesso este Laboratório Prático.
