@@ -20,11 +20,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll create an Azure resource in the Azure portal, selecting the OpenAI service and configuring settings such as region and pricing tier. This setup allows you to integrate OpenAI's advanced language models into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+1. On the Azure portal, type **Azure OpenAI (1)** in the search box and select **Azure OpenAI (2)** from the results.
 
    ![](../media/gg_ex2_1_1.png)
 
-1. In the **AI Foundry** portal, under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click **Create (2)** at the top to provision a new Azure OpenAI resource.
+1. In the **AI Foundry | Azure Open AI** page, under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click **Create (2)** at the top to provision a new Azure OpenAI resource.
 
    ![](../media/gg_ex2_1_2.png)
 
@@ -70,7 +70,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 In this task, you'll deploy a specific AI model instance within your Azure OpenAI resource to integrate advanced language capabilities into your applications.
 
-1. In the **Azure portal**, search for **Azure OpenAI (1)** and select **Azure OpenAI (2)**.
+1. On the Azure portal, type **Azure OpenAI (1)** in the search box and select **Azure OpenAI (2)** from the results.
 
    ![](../media/gg_ex2_1_7.png)
 
@@ -78,7 +78,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/T2S2-2107.png)
 
-1. In the Azure OpenAI resource page, click on **Overview (1)** page and click on **Go to Azure AI Foundry portal (2)**. It will navigate to the **Azure AI Foundry portal**.
+1. In the Azure OpenAI resource page, click on the **Overview (1)** page and click on **Go to Azure AI Foundry portal (2)**. It will navigate to the **Azure AI Foundry portal**.
     
    ![](../media/gg_ex2_1_9.png)
 
@@ -87,7 +87,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/gg_ex2_1_11.png)
 
-1. In the **Select a model** window, search for **gpt-35-turbo (1)**, then select the model from the list **(2)**. Click **Confirm (3)** to proceed with the deployment.
+1. In the **Select a model** window, search for **gpt-35-turbo (1)**, then select the **gpt-35-turbo (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
 
    ![](../media/gg_ex2_1_12.png)
 
