@@ -82,8 +82,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
     
    ![](../media/gg_ex2_1_9.png)
 
-1. In the Azure AI Foundry portal, under **Shared resources**, select **Deployments (1)** from the left pane.  
-   Click on **Deploy model (2)** and choose **Deploy base model (3)** from the dropdown.
+1. In the Azure AI Foundry portal, under **Shared resources**, select **Deployments (1)** from the left pane. Click on **Deploy model (2)** and choose **Deploy base model (3)** from the dropdown.
 
    ![](../media/gg_ex2_1_11.png)
 
