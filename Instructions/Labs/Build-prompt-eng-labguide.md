@@ -57,8 +57,6 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
         ![](../media/gs_1_12.png "Keys and Endpoints")
 
-#### Validation
-
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -111,8 +109,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
         > **Note:** You can ignore the "Failed to fetch deployments quota information" notification.
         
         > **Note:** Each Azure OpenAI model is optimized for a different balance of capabilities and performance. We'll use the **3.5 Turbo** model series in the **GPT-3** model family in this exercise, which is highly capable of language understanding. This exercise only uses a single model; however, deployment and usage of other models you deploy will work in the same way.
-   
-#### Validation
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you can proceed to the next task. 
