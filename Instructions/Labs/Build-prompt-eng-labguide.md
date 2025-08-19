@@ -621,15 +621,17 @@ In this task, you will run your configured app to send a request to your model a
 1. In the **TERMINAL** pane, make sure you're in the correct folder based on your preferred language.  
     Then, run the application using the appropriate command:
 
-   - **C#:**  
-     Type `dotnet run` and press **Enter**.  
+   - **C#:**
+     Type `dotnet run` and press **Enter**.
+
      ![](../media/gg_ex2_1_34.png)
 
    - **Python:**  
-     Type `python prompt-engineering.py` and press **Enter**.  
+     Type `python prompt-engineering.py` and press **Enter**.
+
      ![](../media/gg_ex2_1_33.png)
 
-> **Note:** If you see a message like *"Press any key to continue..."*, press **Enter** to proceed.
+     > **Note:** If you see a message like *"Press any key to continue..."*, press **Enter** to proceed.
 
 1. For the first iteration, enter the following prompts:
 
@@ -646,12 +648,12 @@ In this task, you will run your configured app to send a request to your model a
     ```prompt
     Write an intro for a new wildlife Rescue
     ```
-    
+   
     ![](../media/x233upd.png)
 
 1. Observe the output. The AI model will likely produce a good generic introduction to a wildlife rescue.
 
-1. Next, enter the following prompts which specify a format for the response:
+1. Next, enter the following prompts, which specify a format for the response:
 
     **System message (system.txt)**
 
