@@ -24,7 +24,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
    ![](../media/gg_ex2_1_1.png)
 
-1. In the **AI Foundry | Azure Open AI** page, under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click **Create (2)** at the top to provision a new Azure OpenAI resource.
+1. In the **AI Foundry | Azure Open AI** page, under the **Use with AI Foundry** section, select **Azure OpenAI (1)** from the left pane. Then, click **+ Create (2)** at the top to provision a new Azure OpenAI resource.
 
    ![](../media/gg_ex2_1_2.png)
 
@@ -249,6 +249,7 @@ In this task, you will explore how prompt engineering impacts model behavior in 
     ```
 
 1. This time, the model should respond with an appropriate classification, even without instructions.
+
     > **Note:** If you notice a delay in the response, try clearing the chat and starting again.
 
 ## Task 4: Configure your application
