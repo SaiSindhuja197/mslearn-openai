@@ -345,7 +345,6 @@ In this task, you will complete key parts of the provided C# or Python applicati
      ```
      ![](../media/gg_ex2_1_32.png)
 
-
 1. Open up the application code for your language and add the necessary code for configuring the client.
 
     **C#:** Program.cs
