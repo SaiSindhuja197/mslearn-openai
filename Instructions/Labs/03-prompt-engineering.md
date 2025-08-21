@@ -148,7 +148,8 @@ In this task, you will examine how prompt engineering improves model responses i
     ```
 
 1. The model should correctly respond with complete python code doing what the comments requested.
-8. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the Give the model instructions and context and enter `You are a helpful AI assistant` again, and **Apply changes** your changes and subsequently click on **Continue**. This will create a new chat session.
+
+1. Next we'll see the impact of few shot prompting when attempting to classify articles. Return to the Give the model instructions and context and enter `You are a helpful AI assistant` again, and **Apply changes** your changes and subsequently click on **Continue**. This will create a new chat session.
 
 1. Send the following prompt to the model.
 
@@ -168,9 +169,9 @@ In this task, you will examine how prompt engineering improves model responses i
 
     ![](../media/example1-1.png)
 
-       **User:**
+    **User:**
 
-       ```code
+    ```code
       New York Baseballers Wins Big Against Chicago
 
       New York Baseballers mounted a big 5-0 shutout against the Chicago Cyclones last night, solidifying their win with a 3 run homerun late in the bottom of the 7th inning.
@@ -178,46 +179,46 @@ In this task, you will examine how prompt engineering improves model responses i
       Pitcher Mario Rogers threw 96 pitches with only two hits for New York, marking his best performance this year.
 
       The Chicago Cyclones' two hits came in the 2nd and the 5th innings, but were unable to get the runner home to score.
-       ```
+    ```
 
-       **Assistant:**
-
-       ```code
-       Sports
-      ```
+    **Assistant:**
+       
+    ```code
+    Sports
+    ```
 
 1. Add another example with the following text.
 
-       **User:**
+    **User:**
 
-       ```code
-      Joyous moments at the Oscars
+    ```code
+    Joyous moments at the Oscars
 
-      The Oscars this past week where quite something!
+    The Oscars this past week where quite something!
 
-      Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
-      These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
+    Though a certain scandal might have stolen the show, this year's Academy Awards were full of moments that filled us with joy and even moved us to tears.
+    These actors and actresses delivered some truly emotional performances, along with some great laughs, to get us through the winter.
 
-      From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
-       ```
+    From Robin Kline's history-making win to a full performance by none other than Casey Jensen herself, don't miss tomorrows rerun of all the festivities.
+    ```
 
-       **Assistant:**
+    **Assistant:**
 
-       ```code
-      Entertainment
-       ```
+    ```code
+    Entertainment
+    ```
 
 1. Save those changes to the assistant setup, click continue, and send the same prompt about California drought, provided here again for convenience.
 
-      ```code
-      Severe drought likely in California
+    ```code
+    Severe drought likely in California
 
-      Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
+    Millions of California residents are bracing for less water and dry lawns as drought threatens to leave a large swath of the region with a growing water shortage.
 
-      In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
+    In a remarkable indication of drought severity, officials in Southern California have declared a first-of-its-kind action limiting outdoor water use to one day a week for nearly 8 million residents.
 
-      Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
-       ```
+    Much remains to be determined about how daily life will change as people adjust to a drier normal. But officials are warning the situation is dire and could lead to even more severe limits later in the year.
+    ```
 
 1. This time the model should respond with an appropriate classification, even without instructions.
 
