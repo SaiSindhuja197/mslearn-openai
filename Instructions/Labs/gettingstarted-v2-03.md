@@ -73,6 +73,7 @@ For convenience, you can open the lab guide in a separate window by selecting th
    ![Manage Your Virtual Machine](../media/cor-op-rt-g-5.png)
 
 ## Login to Azure Portal
+
 1. In the JumpVM, click on Azure portal shortcut of Microsoft Edge browser which is created on desktop.
 
    ![](../media/cor-op-rt-g-7.png "Lab Environment")
