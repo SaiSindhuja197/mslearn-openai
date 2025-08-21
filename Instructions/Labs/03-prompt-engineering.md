@@ -100,7 +100,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
   
       ![](../media/op-rt-g-13.png)
 
-      ![](../media/op-rt-g-2.png)
+      ![](../media/cor-op-rt-g-1.png)
    
     >**Note:** gpt-4o is supported only for chat completions.
 
