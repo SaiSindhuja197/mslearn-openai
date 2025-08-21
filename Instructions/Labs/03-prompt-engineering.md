@@ -758,8 +758,11 @@ In this task, you will run your configured app to send a request to your model a
 ## Summary
 
 In this lab, you have accomplished the following:
-- Provision an Azure OpenAI resource
-- Deploy an OpenAI model within the Azure AI Foundry portal
-- Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
+
+- Provisioned an **Azure OpenAI resource**.  
+- Deployed a **GPT-4o model** in the **Azure AI Foundry portal**.  
+- Applied **prompt engineering** in the chat playground.  
+- Set up and configured an **application in Cloud Shell**.  
+- Ran the app to observe how different prompts influence model responses.  
 
 ### You have successfully completed the lab.
