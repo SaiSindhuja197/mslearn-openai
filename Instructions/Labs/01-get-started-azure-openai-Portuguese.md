@@ -3,7 +3,7 @@
 ### Duração Estimada: 120 Minutos
 
 ## Cenário do Laboratório
-Neste laboratório, você aprenderá como começar a usar o OpenAI do Azure, provisionando o serviço como um recurso do Azure e utilizando o portal Azure AI Foundry para implantar e explorar modelos OpenAI. O serviço OpenAI do Azure integra os modelos de IA generativa desenvolvidos pela OpenAI à plataforma Azure, permitindo que você desenvolva soluções de IA robustas que se beneficiam da segurança, escalabilidade e integração de serviços oferecidos pela plataforma de nuvem do Azure.
+Neste laboratório, você aprenderá como começar a usar o Azure OpenAI, provisionando o serviço como um recurso do Azure e utilizando o portal Azure AI Foundry para implantar e explorar modelos OpenAI. O serviço Azure OpenAI integra os modelos de IA generativa desenvolvidos pela OpenAI à plataforma Azure, permitindo que você desenvolva soluções de IA robustas que se beneficiam da segurança, escalabilidade e integração de serviços oferecidos pela plataforma de nuvem do Azure.
 
 ## Objetivos do Laboratório
 Neste laboratório, você completará as seguintes tarefas:
@@ -19,7 +19,7 @@ Neste laboratório, você completará as seguintes tarefas:
 
 Nesta tarefa, você criará um recurso no portal do Azure, selecionando o serviço OpenAI e configurando definições como a região e a camada de preço. Esta configuração permite integrar os modelos de linguagem avançados da OpenAI em suas aplicações.
 
-1. No **portal do Azure**, pesquise por **OpenAI do Azure (1)** e selecione **OpenAI do Azure (2)**.
+1. No **portal do Azure**, pesquise por **Azure OpenAI (1)** e selecione **Azure OpenAI (2)**.
 
    ![](../media/upd-1.png)
 
@@ -27,7 +27,7 @@ Nesta tarefa, você criará um recurso no portal do Azure, selecionando o servi�
 
    ![](../media/upd-10.png)
 
-3. Crie um recurso **OpenAI do Azure** com as seguintes configurações e clique em **Próxima (6)** três vezes:
+3. Crie um recurso **Azure OpenAI** com as seguintes configurações e clique em **Próxima (6)** três vezes:
    
     - Assinatura: Padrão - Assinatura pré-atribuída **(1)**
     - Grupo de recursos: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
@@ -54,9 +54,9 @@ Nesta tarefa, você criará um recurso no portal do Azure, selecionando o servi�
 
 ## Tarefa 2: Implantar um modelo
 
-Nesta tarefa, você implantará uma instância de modelo de IA específica dentro do seu recurso OpenAI do Azure para integrar capacidades avançadas de linguagem em suas aplicações.
+Nesta tarefa, você implantará uma instância de modelo de IA específica dentro do seu recurso Azure OpenAI para integrar capacidades avançadas de linguagem em suas aplicações.
 
-1. No **portal do Azure**, pesquise por **OpenAI do Azure(1)** e selecione **OpenAI do Azure (2)**.
+1. No **portal do Azure**, pesquise por **Azure OpenAI(1)** e selecione **Azure OpenAI (2)**.
 
    ![](../media/upd-1.png)
 
@@ -64,7 +64,7 @@ Nesta tarefa, você implantará uma instância de modelo de IA específica dentr
 
    ![](../media/upd-13.png)
 
-1. Na página do recurso do OpenAI do Azure, clique em **Go to Azure AI Foundry portal** para navegar até o **portal Azure AI Foundry**.
+1. Na página do recurso do Azure OpenAI, clique em **Go to Azure AI Foundry portal** para navegar até o **portal Azure AI Foundry**.
 
     ![](../media/upd-14.png)
 
@@ -285,7 +285,7 @@ Além de gerar respostas em linguagem natural, você pode usar modelos GPT para 
 ## Resumo
 
 Neste laboratório:
-- Você provisionou um recurso do Serviço OpenAI do Azure para integrar capacidades de IA generativa em suas aplicações.
+- Você provisionou um recurso do Serviço Azure OpenAI para integrar capacidades de IA generativa em suas aplicações.
 - Implantou dois modelos usando o portal Azure AI Foundry.
 - Explorou os modelos nos playgrounds de Completions e Chat, experimentou com prompts e parâmetros, e testou as capacidades de geração de código do modelo.
 
