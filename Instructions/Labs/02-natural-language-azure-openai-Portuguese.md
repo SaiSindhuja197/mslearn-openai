@@ -20,7 +20,7 @@ Neste laboratório, você realizará as seguintes tarefas:
 
 Nesta tarefa, você provisionará um recurso do Azure OpenAI em sua assinatura do Azure. Este passo é essencial para acessar os modelos OpenAI e obter o ponto de extremidade (endpoint) e a chave de API (API key) necessários para autenticar sua aplicação.
 
-1. No **portal do Azure**, pesquise por **OpenAI do Azure (1)** e selecione **OpenAI do Azure (2)**.
+1. No **portal do Azure**, pesquise por **Azure OpenAI (1)** e selecione **Azure OpenAI (2)**.
 
    ![](../media/31-7-25-l3-1.png)
 
