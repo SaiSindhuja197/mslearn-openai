@@ -40,7 +40,9 @@ This lab provides robust functionalities for leveraging AI within Azure. Azure O
 
 ## Architecture Diagram
 
-![](../media/blank_diagram_1.JPG "Lab Environment")
+![](../media/DevgenAI-Arch-1-3.png "Lab Environment")
+
+![](../media/DevgenAI-Arch-4-7.png "Lab Environment")
 
 ## Explanation of Components
 
