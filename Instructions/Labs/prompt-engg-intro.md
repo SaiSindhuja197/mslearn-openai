@@ -45,7 +45,7 @@ Let's go ahead and launch the Azure OpenAI playground to learn about prompt engi
 
 1. In the **Overview (1)** page of Azure OpenAI resource, click on **Go to Azure AI Foundry portal (2)**. It will navigate to the **Azure AI Foundry portal**.
 
-     ![](../media/update08.png)    
+     ![](../media/L1T1S3.png)    
 
 1. In the **Azure AI Foundry | Azure OpenAI Service** pane, click on **Chat** under  **Playgrounds** from the left menu.
 
@@ -53,7 +53,7 @@ Let's go ahead and launch the Azure OpenAI playground to learn about prompt engi
 
 1. In the **Chat** section, give any query from the **Chat session** to get the response from the openai. 
 
-   ![](../media/17022025(5).png)
+   ![](../media/L1T1S5.png)
    
 Chat may not respond with the exact output as shown in the screenshots. Below are examples of what you'll most likely see in this exercise, but the response may vary.
 

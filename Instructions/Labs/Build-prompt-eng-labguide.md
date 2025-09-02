@@ -32,7 +32,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
     - **Subscription:** Default - Pre-assigned subscription **(1)**.
     - **Resource group:** openai-<inject key="Deployment-ID" enableCopy="false"></inject> **(2)**
-    - **Region:** Select **France Central** **(3)**
+    - **Region:** Select **<inject key="Region" enableCopy="false"/>** **(3)**
     - **Name:** OpenAI-Lab01-<inject key="Deployment-ID" enableCopy="false"></inject> **(4)**
     - **Pricing tier:** Standard S0 **(5)**
     -  Click on **Next** **(6)**
@@ -84,25 +84,24 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/gg_ex2_1_11.png)
 
-1. In the **Select a model** window, search for **gpt-35-turbo (1)**, then select the **gpt-35-turbo (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
+1. In the **Select a model** window, search for **gpt-4.1-mini (1)**, then select the **gpt-35-turbo (Chat completion) (2)** model from the list. Click **Confirm (3)** to proceed with the deployment.
 
-   ![](../media/gg_ex2_1_12.png)
+   ![](../media/L2T2S5.png)
 
-1. On the **Deploy gpt-35-turbo** screen, click **Customize** to modify deployment details.
+1. On the **Deploy gpt-4.1-mini** screen, click **Customize** to modify deployment details.
 
-   ![](../media/gg_ex2_1_13.png)
+   ![](../media/L2T2S6.png)
 
 1. Within the **Deploy model** interface, enter the following details:
     - **Deployment name:** text-turbo **(1)**
-    - **Deployment type:** Standard **(2)**
-    - **Model version:** 0125 (Default) **(3)**
+    - **Deployment type:** GlobalStandard **(2)**
+    - **Model version:** 2025-04-14(Default) **(3)**
     - **Tokens per Minute Rate Limit (thousands):** 10K **(4)**
-    - **Enable dynamic quota:** Enabled **(5)**
-    - Click on **Deploy** **(6)**
+    **Deploy** **(5)**
 
         >**Note:** Click on the customize and collapse button to expand the other options.
 
-        ![](../media/gg_ex2_1_14.png)
+        ![](../media/L2T2S7.png)
 
         >**Note:** If you encounter an issue indicating that no model is found, please revert to the old version and attempt to deploy the model again. You can switch back to the new version once it's deployed.
 
