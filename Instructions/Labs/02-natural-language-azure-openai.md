@@ -529,11 +529,8 @@ Now that your app has been set up, you can just run it to send your request to y
 
 ## Summary
 
-In this lab, you have accomplished the following:
-- Provision an Azure OpenAI resource
-- Deploy an OpenAI model within the Azure AI Foundry portal
-- Integrate Azure OpenAI models into your applications
+In this lab, you learned how to use Azure OpenAI SDKs in your app by setting up a simple command-line application that interacts with an Azure OpenAI model. You configured the application with your Azure OpenAI resource details, integrated the Azure OpenAI SDK, and tested the application with various prompts to see how the model responds based on different instructions.
 
-### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
 ![Launch Azure Portal](../media/next-page-2107.png)
