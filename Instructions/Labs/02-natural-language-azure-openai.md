@@ -72,7 +72,7 @@ In this task, you will integrate with an Azure OpenAI model. We'll use a short c
 
         ![](../media/nlpe18.png "Create storage advanced settings")
 
-1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, ⤢ and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
 1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
@@ -147,7 +147,12 @@ For this task, you'll complete some key parts of the application to enable using
     
     - Python: `.env`
     
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the blank space in the file text editor and hit **Save**.
+1. In the configuration file, enter the following values for your Azure OpenAI service:
+
+    - **Endpoint**: The endpoint URL from your Azure OpenAI resource.
+    - **Key1**: The primary key from your Azure OpenAI resource.
+    - **Deployment Name**: Set this to **my-gpt-model** (the name of your model deployment).
+    After updating these values, save the file by right-clicking it in the left pane.
 
     - **C#:**
      
@@ -529,11 +534,8 @@ Now that your app has been set up, you can just run it to send your request to y
 
 ## Summary
 
-In this lab, you have accomplished the following:
-- Provision an Azure OpenAI resource
-- Deploy an OpenAI model within the Azure AI Foundry portal
-- Integrate Azure OpenAI models into your applications
+In this lab, you learned how to use Azure OpenAI SDKs in your app by setting up a simple command-line application that interacts with an Azure OpenAI model. You configured the application with your Azure OpenAI resource details, integrated the Azure OpenAI SDK, and tested the application with various prompts to see how the model responds based on different instructions.
 
-### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
 ![Launch Azure Portal](../media/next-page-2107.png)

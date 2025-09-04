@@ -3,6 +3,7 @@
 ## Estimated Duration: 80 Minutes
 
 ## Lab Overview
+
 In this lab, you'll learn how to get started with Azure OpenAI by provisioning the service as an Azure resource and using the Azure AI Foundry portal to deploy and explore OpenAI models. The Azure OpenAI Service brings the generative AI models developed by OpenAI to the Azure platform, enabling you to develop powerful AI solutions that benefit from the security, scalability, and integration of services provided by the Azure cloud platform. 
 
 ## Lab objectives
@@ -92,9 +93,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 ## Task 3: Use the Chat playground
 
-In this task, you'll use the Chat playground to interact with and test the AI model's conversational abilities through a simulated chat interface.
+In this task, you'll use the Chat option to interact with and test the AI model's conversational abilities through a simulated chat interface.
 
-1. In the Azure **AI Foundry portal** from the left navigation pane, select the **Chat** section under the **Playground** and ensure that the **my-gpt-model (1)** model is selected in the Deployment pane.
+1. In the Azure **AI Foundry portal** from the left navigation pane, select the **Chat** section under the **Playgrounds** and ensure that the **my-gpt-model (1)** model is selected in the Deployment pane.
 
 2. In the **Setup** section, in the **Give the model instructions and context** box, replace the current text with the following statement **(2):**
 
@@ -124,7 +125,7 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
       >**Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-5. Save the changes by clicking on **Apply changes** and on **Update system message?** pop-up, click on **Continue**.
+5. Save the changes by clicking on **Apply changes** and on **Update system message?** pop-up, check the **Do show this again** box and click on **Continue**.
 
     ![](../media/L1T4S5-1607.png)
    
@@ -136,12 +137,12 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
    ![](../media/L1T4S6-1607.png)
 
-   > **Note:** You may receive a response that the API deployment is not yet ready. If so, wait for a few minutes and try again.
+   > **Note:** If you receive a response that the API deployment is not yet ready, please wait for a few minutes and try again.
 
 7. Review the response and then submit the following message to continue the conversation:
 
    ```
-   How is it related to machine learning?`
+   How is it related to machine learning?
    ```
 
 8. Review the response, noting that context from the previous interaction is retained (so the model understands that "it" refers to artificial intelligence).
@@ -150,13 +151,11 @@ In this task, you'll use the Chat playground to interact with and test the AI mo
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
-1. In the **Setup** pane select **Parameters** , set the following parameter values:
+1. In the **Setup** pane, scroll down and select **Parameters**. Set the following parameter values:
     
    - **Max response (1):** 500
 
    - **Temperature (2):** 0
-    
-      > **Note:** You may need to scroll down to see the parameters option.
 
         ![](../media/L1T5S1-1607.png)
       
@@ -186,7 +185,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup** section, keeping the Deployments as **my-gpt-model (1)**; in the **Give the model instructions and context** box, replace the current text with the following statement: `You are a Python developer.` **(2)** and save the changes by clicking on **Apply Changes (3)**. When prompted with **Update system message?**, click **Continue** to proceed.
+1. In the **Setup** section, keep the Deployments as **my-gpt-model (1)**; in the **Give the model instructions and context** box, replace the current text with the following statement: `You are a Python developer.` **(2)** and save the changes by clicking on **Apply Changes (3)**.
 
    ![](../media/L1T6S1-1607.png)
 
@@ -194,7 +193,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
    ![](../media/L1T6S3-1607.png)
 
-3. Submit the following user message:
+3. Submit the following query in chat:
 
    ```
    Write a Python function named Multiply that multiplies two numeric parameters.
@@ -204,11 +203,8 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
 ## Summary
 
-In this lab, you have accomplished the following:
-- Provision an Azure OpenAI resource
-- Deploy an Azure OpenAI model within the Azure AI Foundry portal
-- Use the chat playground to utilize the functionalities of prompts, parameters, and code generation
+In this lab, you learned how to get started with Azure OpenAI by provisioning the service as an Azure resource and using the Azure AI Foundry portal to deploy and explore OpenAI models. You deployed a model, used the Chat playground, explored prompts and parameters, and explored code generation.
 
-### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+### Congratulations on completing Lab 01! Click Next >> to continue to the next lab.
 
 ![Launch Azure Portal](../media/next-page-2107.png)
