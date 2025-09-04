@@ -55,9 +55,9 @@ The architecture for this lab involves the following key components:
 - **Prompt Engineering:** Prompt engineering fine-tunes input prompts to improve AI model replies, ensuring accurate and relevant outputs by optimizing how prompts are produced and delivered to AI models.
 - **AI chat:** AI chat, also known as an AI chatbot or conversational AI, is a technology that uses artificial intelligence to facilitate automated, human-like conversations between machines and users. These systems are designed to understand and interpret natural language inputs, enabling them to respond in a way that simulates a real conversation.
 
-# Getting Started with the lab
+# Getting Started with the lab environment
  
-Welcome to your Develop Generative AI Solutions with Azure OpenAI service workshop! We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
+We've prepared a seamless environment for you to explore and learn about the connection between artificial intelligence (AI), Responsible AI, and text, code, and image generation. Let's begin by making the most of this experience:
  
 ## Accessing Your Lab Environment
  
@@ -87,12 +87,6 @@ Feel free to **Start, Stop, or Restart (2)** your virtual machine as needed from
  
 ![Manage Your Virtual Machine](../media/dev-04.png)
 
-## Lab Validation
-
-After completing the task, hit the **Validate** button integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
-
-   ![Inline Validation](../media/dev-05.png)
-
 ## Lab Guide Zoom In/Zoom Out
 
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
@@ -120,6 +114,32 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 1. If you see the pop-up **Stay Signed in?**, select **No**.
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+
+## Steps to Proceed with MFA Setup
+
+If, in case, after signing in to the Azure portal, you are asked to register for MFA, please follow the steps below to proceed:
+
+1. At the **"More information required"** prompt, select **Next**.
+
+1. On the **"Keep your account secure"** page, select **Next** twice.
+
+1. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
+
+   - Open **Google Play Store** (Android) or **App Store** (iOS).
+   - Search for **Microsoft Authenticator** and tap **Install**.
+   - Open the **Microsoft Authenticator** app, select **Add account**, then choose **Work or school account**.
+
+1. A **QR code** will be displayed on your computer screen.
+
+1. In the Authenticator app, select **Scan a QR code** and scan the code displayed on your screen.
+
+1. After scanning, click **Next** to proceed.
+
+1. On your phone, enter the number shown on your computer screen in the Authenticator app and select **Next**.
+       
+1. If prompted to stay signed in, you can click "No."
+ 
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
 
 ## Support Contact
 
