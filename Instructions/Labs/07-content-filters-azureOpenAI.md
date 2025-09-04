@@ -21,9 +21,9 @@ In this task, you will observe how the model behaves in a conversational interac
 
 1. In [Azure AI Foundry portal](https://oai.azure.com/), navigate to the **Chat** under **Playgrounds** from the left pane.
 
-1. In the **Setup** section at the left side, ensure the deployment is set to **my-gpt-model** and **Give the model instructions and context** is set to `You are an AI assistant that helps people find information.`
+1. In the **Setup** section on the left side, ensure the deployment is set to **my-gpt-model** and **Give the model instructions and context** is set to `You are an AI assistant that helps people find information.`
 
-1. Remove the data source which you added in the previous lab by clicking on the **Remove data source** button in the Data source section in the bottom.
+1. Remove the data source that you added in the previous lab by clicking on the **Remove data source** button in the Data source section at the bottom.
 
 1. In the **Chat session** section, enter the following prompt.
 
@@ -76,6 +76,6 @@ In this task, you will apply content filters to prompts and completions to preve
 
 In this lab, you explored the default content filters in Azure OpenAI and observed how they help prevent the generation of potentially harmful or offensive language. You also reviewed how to create and configure custom content filters to meet specific responsible AI requirements for your generative AI applications.
 
-## You have successfully completed the Hands-on lab.
+## You have completed the Hands-on lab.
 
 By completing the **Develop Generative AI solutions with Azure OpenAI Service** Hands-on-Lab, you have developed practical skills in building generative AI solutions using the Azure OpenAI Service. You learned to configure and integrate Azure OpenAI SDKs, apply prompt engineering techniques, generate and refine both code and images using advanced models like GPT and DALL·E, and incorporate your own data using Retrieval-Augmented Generation (RAG). Additionally, you explored content filtering to manage AI output responsibly. These hands-on exercises have equipped you to confidently design, deploy, and scale secure, intelligent, and production-ready AI applications in the Azure ecosystem.
