@@ -20,11 +20,11 @@ In this lab, you will complete the following tasks:
 
 In this task, you'll explore how prompt engineering influences model behavior by experimenting with different instructions and examples in the Chat playground. You'll learn to guide the model's responses—ranging from article categorization to code generation—by modifying system prompts and adding few-shot examples.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playground** in the left pane and verify that the **my-gpt-model (2)** model is selected in the Deployment.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and verify that the **my-gpt-model (2)** model is selected in the Deployment.
 
    ![](../media/dev-genai-june-5.png)
 
-1. Update the  **Give the model instructions and context** with the text mentioned below, and click on **Apply changes**. In the **Update system message?** pop-up click on **Continue**.
+1. Update the  **Give the model instructions and context** with the text mentioned below, and click on **Apply changes**. 
 
    ```
    You are an AI assistant that helps people find information.
@@ -99,7 +99,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
    ![](../media/L3T1S7-0205.png)
 
-1. Click on the **Apply changes** button to save your changes and click on **Continue**.
+1. Click on the **Apply changes** button to save your changes.
 
 1. In the **Chat session** section, resubmit the following prompt:
 
@@ -117,8 +117,7 @@ In this task, you'll explore how prompt engineering influences model behavior by
 
     The combination of a more specific system message and some examples of expected queries and responses results in a consistent format for the results.
 
-1. Set the **Give the model instructions and context** to the text mentioned below. Save the changes by clicking on **Apply changes** and subsequently clicking on **Continue** to start a new session and set the behavioral context of the chat system.
-
+1. Set the **Give the model instructions and context** to the text mentioned below. Save the changes by clicking on **Apply changes**.
    ```
    You are an AI assistant that helps people find information.
    ```
@@ -274,16 +273,9 @@ In this task, you will complete key parts of the provided C# or Python applicati
    
     ```bash
     cd Python
-    pip install python-dotenv
-    pip install openai==1.56.2
+    pip install --user python-dotenv
+    pip install --user openai==1.56.2
     ```
-   ![](../media/L2T3S9python-0205.png)
-
-      > **Note:** If you receive a permission error after executing the installation command as shown in the above image, please run the below command for installation/
-      > ```bash
-      > pip install --user python-dotenv
-      > pip install --user openai==1.56.2
-      > ```
 
 1. Navigate to your preferred language folder, select the code file, and add the necessary libraries in the **Add Azure OpenAI package** section.
 
@@ -606,7 +598,7 @@ In this task, you will run your configured app to send a request to your model a
 
        >**Note:** If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command: `pip install --user --upgrade openai`
 
-       >Note: If you get any **ImportError: cannot import name 'ChatCompletionReasoningEffort' from 'openai.types.chat'**, then try executing the below commands once and then try to run the Python application.
+       >**Note:** If you get any **ImportError: cannot import name 'ChatCompletionReasoningEffort' from 'openai.types.chat'**, then try executing the below commands once and then try to run the Python application.
        
        >```
        >pip uninstall -y openai
@@ -615,37 +607,47 @@ In this task, you will run your configured app to send a request to your model a
        >pip install --user --no-cache-dir openai==1.56.2
        >```
 
-       > **Tip:** You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
-
 1. For the first iteration, Type **1** which selects the **Basic prompt (no prompt engineering)**, and press enter for **Enter a number to select a prompt**.
 
-1. The AI tool will take the **System prompt** as `You are an AI assistant` and the **User prompt** as `Write an intro for a new wildlife Rescue`
+1. The AI tool will take the,
 
-     ![](../media/L3T4S5-1707.png)
+   -  **System prompt:** `You are an AI assistant`
+   -  **User prompt:** `Write an intro for a new wildlife Rescue`
+
+        ![](../media/L3T4S5-1707.png)
 
 1. Observe the output. The model will likely produce a good generic introduction to a wildlife rescue.
 
 1. Next, enter **2** to select **Prompt with email formatting and basic system message** and press enter for **Enter a number to select a prompt**.
 
-1. This time it will take the **System prompt** as `You are an AI assistant helping to write emails` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website`
+1. This time it will take the,
 
-     ![](../media/L3T4S8-1707.png)
+   - **System prompt:** `You are an AI assistant helping to write emails`
+   - **User prompt:** `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants - Call for donations to be given at our website`
+
+        ![](../media/L3T4S8-1707.png)
 
 1. Observe the output. This time, you'll likely see the format of an email with the specific animals included, as well as the call for donations.
 
 1. Next, enter **3** to select **Prompt with formatting and specifying content** and press enter for **Enter a number to select a prompt**.
 
-1. Observe, it will take the **System prompt** as `You are an AI assistant helping to write emails` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website \n\n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
+1. Observe, it will take the,
 
-     ![](../media/L3T4S11-1707.png)
+   - **System prompt:** `You are an AI assistant helping to write emails`
+   - **User prompt:** `Write a promotional email for a new wildlife rescue, including the following: - Rescue name is Contoso - It specializes in elephants, as well as zebras and giraffes - Call for donations to be given at our website \n\n Include a list of the current animals we have at our rescue after the signature, in the form of a table. These animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
+
+        ![](../media/L3T4S11-1707.png)
 
 1. Observe the output and see how the email has changed based on your clear instructions.
 
 1. Next, enter **4** to select **Prompt adjusting system message to be light and use jokes** and press enter for **Enter a number to select a prompt**.
 
-1. It will take the **System prompt** as `You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented and you always include at least two jokes.` and the **User prompt** as `Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
+1. It will take the,
 
-     ![](../media/L3T4S14-1707.png)
+   - **System prompt:** `You are an AI assistant that helps write promotional emails to generate interest in a new business. Your tone is light, chit-chat oriented, and you always include at least two jokes.`
+   - **User prompt:** `Write a promotional email for a new wildlife rescue, including the following: Rescue name is Contoso, it specializes in elephants, as well as zebras and giraffes, call for donations to be given at our website, include a list of the current animals we have at our rescue after the signature in the form of a table, these animals include elephants, zebras, gorillas, lizards, and jackrabbits.`
+
+        ![](../media/L3T4S14-1707.png)
 
 11. Observe the output. This time, you'll likely see the email in a similar format, but with a much more informal tone. You'll likely even see jokes included!
 
@@ -656,6 +658,6 @@ In this lab, you have accomplished the following:
 - Deploy an OpenAI model within the Azure AI Foundry portal
 - Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
 
-### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
 ![Launch Azure Portal](../media/next-page-2107.png)
