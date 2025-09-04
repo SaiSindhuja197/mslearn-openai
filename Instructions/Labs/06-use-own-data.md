@@ -32,7 +32,7 @@ In this task, you will observe how the base model responds to queries without an
 3. In the **Setup** area, for the Give the model instructions and context, provide the following message and click on **Apply changes**.
 
     ```
-    You are an AI assistant that helps people find information`.
+    You are an AI assistant that helps people find information.
     ```
 
    ![](../media/model-instr-2107.png)
@@ -251,7 +251,7 @@ In this task, you will complete key parts of the application to enable it to use
 
     - **Azure OpenAI endpoint**: Paste the endpoint URL from your Azure OpenAI resource (found on the Keys and Endpoint page in the Azure portal).
     - **Azure OpenAI key**: Paste the key from your Azure OpenAI resource (also on the Keys and Endpoint page).
-    - **Deployment name**: Enter the name of your model deployment (e.g., `my-gpt-model` from the Deployments page in Azure AI Foundry portal).
+    - **Deployment name**: Enter the name of your model deployment (e.g., `my-gpt-model` from the Deployments page in the Azure AI Foundry portal).
     - **Azure AI Search endpoint**: Paste the endpoint URL for your AI Search service (copied earlier or found in the overview page for your AI Search resource).
     - **Azure AI Search key**: Paste the admin key for your AI Search resource (available on the Keys page).
     - **Search index name**: Enter `margiestravel` as the index name.
@@ -325,7 +325,7 @@ In this task, you will complete key parts of the application to enable it to use
     dotnet add package Azure.Search.Documents --version 11.6.0
     ```
 
-1. If you prefer **Python**, navigate to the **Python** folder and install the necessary packages using the below commands:
+1. If you prefer **Python**, navigate to the **Python** folder and install the necessary packages using the commands below:
 
     ```
     cd Python
