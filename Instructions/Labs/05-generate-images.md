@@ -127,7 +127,7 @@ In this task, you will use a configuration file in the application to store the 
    pip install --user python-dotenv
     ```
 
-1. If you're using **C#**, navigate to `generate_image.csproj`, delete the existing code, then replace it with the following code and then press **Ctrl+S** to save the file.
+1. If you're using **C#**, navigate to `generate_image.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
