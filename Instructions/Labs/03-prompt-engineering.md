@@ -196,7 +196,12 @@ In this task, you will complete key parts of the provided C# or Python applicati
     - C#: `appsettings.json`
     - Python: `.env`
     
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model's name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**
+1. In the configuration file, enter the following values for your Azure OpenAI service:
+
+    - **Endpoint**: The endpoint URL from your Azure OpenAI resource.
+    - **Key1**: The primary key from your Azure OpenAI resource.
+    - **Deployment Name**: Set this to **my-gpt-model** (the name of your model deployment).
+    After updating these values, save the file by right-clicking it in the left pane.
 
 1. If you're using **C#**, navigate to `CSharp.csproj`, delete the existing code, then replace it with the following code, and then press **Ctrl+S** to save the file.
 

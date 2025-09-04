@@ -3,6 +3,7 @@
 ## Estimated Duration: 75 Minutes
 
 ## Lab Overview
+
 In this lab, you will learn how to connect your own data to the Azure OpenAI Service for Retrieval-Augmented Generation (RAG).
 
 The Azure OpenAI Service enables you to use your own data with the intelligence of the underlying LLM. You can limit the model to only use your data for pertinent topics or blend it with results from the pre-trained model.
@@ -20,15 +21,19 @@ In this lab, you will complete the following tasks:
 
 ## Task 1: Observe normal chat behavior without adding your own data
 
-Before you connect Azure OpenAI to your data, you should first observe how the base model responds to queries without any grounding data.
+In this task, you will observe how the base model responds to queries without any grounding data.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playground** in the left pane.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane.
 
 2. In the **Deployment** section in Chat page, ensure that your model deployment **my-gpt-model (2)** is selected.
 
    ![](../media/dev-genai-june-5.png)
 
-3. In the **Setup** area, the default system message is set to *You are an AI assistant that helps people find information*.
+3. In the **Setup** area, for the Give the model instructions and context, provide the following message and click on **Apply changes**.
+
+    ```
+    You are an AI assistant that helps people find information`.
+    ```
 
    ![](../media/model-instr-2107.png)
 
@@ -139,11 +144,11 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/L6T2S19-1807.png)
 
-1. In **Azure AI Foundry portal**, navigate to the **Chat (1)** section under **Playground** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
+1. In **Azure AI Foundry portal**, navigate to the **Chat (1)** section under **Playgrounds** followed by select **Add your data (2)** in the setup pane and click on **+ Add a data source (3)**.
 
     ![](../media/chat_playground-1.png)
    
-1. On the **Add data** page, enter the following values for your data source and then click on **Next (7)** to proceed with **Data Management**.
+1. On the **Add data** window, enter the following values for under the **Data source** and then click on **Next (7)** to proceed with **Data Management**.
 
    | Setting | Action |
    | -- | -- |
@@ -168,11 +173,11 @@ In this task, you will observe how the base model responds to queries without an
 
     ![](../media/review-1.png "Add data")
 
- - This may take a few minutes, during which you need to leave your window open.
+1. This may take a few minutes, during which you need to keep your window open.
        
     ![](../media/review-2.png)
   
- - Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab in the  **Assistant setup** pane.
+1. Once completed, verify if the data source, search resource, and index specified **margiestravel** are present under the **Add your data** tab in the  **Assistant setup** pane.
 
     ![](../media/review-3.png)   
 
@@ -192,7 +197,7 @@ In this task, you will ask the same questions as before in the chat section afte
 
 2. You'll notice a very different response this time, with specifics about certain hotels and a mention of Margie's Travel, as well as references to where the information provided came from. If you open the PDF reference listed in the response, you'll see the same hotels as the model provided. Try asking it about other cities included in the grounding data, which are Dubai, Las Vegas, London, and San Francisco.
 
-> **Note:** **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
+    >**Note:** **Add your data** is still in preview and might not always behave as expected for this feature, such as giving the incorrect reference for a city not included in the grounding data.
 
 ## Task 4: Set up an application in Cloud Shell
 
@@ -242,12 +247,15 @@ In this task, you will complete key parts of the application to enable it to use
     - **C#**: `appsettings.json`
     - **Python**: `.env`
 
-1. Update the configuration values to include:
-    - The  **endpoint** and a **key** from the Azure OpenAI resource you created (Which you copied in the previous task). Alternatively, it is available on the **Keys and Endpoint** page for your Azure OpenAI resource in the Azure portal.
-    - The **deployment name** you specified for your model deployment (available in the **Deployments** page in Azure AI Foundry portal that is **my-gpt-model**).
-    - The endpoint for your AI search service (Which you copied in the previous task; alternatively, it is available in the **URL** value on the overview page for your AI search resource in the Azure portal).
-    - A **key** for your search resource (available in the **Keys** page for your AI search resource in the Azure portal - you can use either of the admin keys)
-    - The name of the search index (which should be `margiestravel`).
+1. Update the configuration file for your chosen language with the following values:
+
+    - **Azure OpenAI endpoint**: Paste the endpoint URL from your Azure OpenAI resource (found on the Keys and Endpoint page in the Azure portal).
+    - **Azure OpenAI key**: Paste the key from your Azure OpenAI resource (also on the Keys and Endpoint page).
+    - **Deployment name**: Enter the name of your model deployment (e.g., `my-gpt-model` from the Deployments page in Azure AI Foundry portal).
+    - **Azure AI Search endpoint**: Paste the endpoint URL for your AI Search service (copied earlier or found in the overview page for your AI Search resource).
+    - **Azure AI Search key**: Paste the admin key for your AI Search resource (available on the Keys page).
+    - **Search index name**: Enter `margiestravel` as the index name.
+    - Save your changes after updating these values.
 
         ![](../media/L6T5S3-1807.png)
 
@@ -255,91 +263,76 @@ In this task, you will complete key parts of the application to enable it to use
 
     ```
     <Project Sdk="Microsoft.NET.Sdk">
-     
-       <PropertyGroup>
-         <OutputType>Exe</OutputType>
-         <TargetFramework>net8.0</TargetFramework>
-         <ImplicitUsings>enable</ImplicitUsings>
-         <Nullable>enable</Nullable>
-         <LangVersion>12</LangVersion>
-       </PropertyGroup>
-     
-       <ItemGroup>
-         <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
-         <PackageReference Include="Azure.Search.Documents" Version="11.6.0" />
-         <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
-         <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
-         <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-       </ItemGroup>
-     
-       <ItemGroup>
-         <None Update="appsettings.json">
-           <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-         </None>
-       </ItemGroup>
-     
-     </Project>
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>12</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Azure.AI.OpenAI" Version="2.1.0" />
+        <PackageReference Include="Azure.Search.Documents" Version="11.6.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="8.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    </Project>
     ```    
 
     ![](../media/L6T5S4-1807.png)    
 
-1. Navigate to the **CSharp** folder and install the necessary packages.
-
-     **C#**:
+1. Navigate to the **CSharp** folder and install the necessary packages. These commands set up the environment for a local installation of the .NET SDK in Cloud Shell.
 
     ```
     cd CSharp
     export DOTNET_ROOT=$HOME/.dotnet
     export PATH=$DOTNET_ROOT:$PATH
     mkdir -p $DOTNET_ROOT
-    ```     
+    ```   
 
-     >**Note**: Azure Cloud Shell often does not have admin privileges, so you need to install .NET in your home directory. So here you are creating a separate `.dotnet` directory under your home directory to isolate your configuration.
-     - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory).
-     - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
-     - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
+    - `DOTNET_ROOT` specifies where your .NET runtime and SDK are located (in your `$HOME/.dotnet directory).
+    - `PATH=$DOTNET_ROOT:$PATH` ensures that the locally installed .NET SDK can be accessed globally by your terminal.
+    - `mkdir -p $DOTNET_ROOT` This creates the directory where the .NET runtime and SDK will be installed.
 
-1. Run the following command to install the required SDK version locally:     
+1. Run the following command to install the required SDK version locally. These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.    
 
      ```
      wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh
      chmod +x dotnet-install.sh
      ./dotnet-install.sh --version 8.0.404 --install-dir $DOTNET_ROOT
-     ```
+     ``` 
 
-      >**Note**: These commands download and prepare the official `.NET` installation script, grant it execute permissions, and install the required .NET SDK version (8.0.404) in the `$DOTNET_ROOT` directory, as we don't have the admin privileges to install it globally.
-
-1. Enter the following command to restore the workload.
+1. Enter the following command to restore any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
 
     ```
     dotnet workload restore
     ```
 
-     >**Note**: Restores any required workloads for your project, such as additional tools or libraries that are part of the .NET SDK.
-    
 1. Enter the following command to add the `Azure.AI.OpenAI` NuGet package to your project, which is necessary for integrating with Azure OpenAI services.
 
     ```
-    dotnet add package Azure.AI.OpenAI --version 1.0.0-beta.14
+    dotnet add package Azure.AI.OpenAI --version 2.1.0
+    dotnet add package Azure.Search.Documents --version 11.6.0
     ```
 
-1. If you are using Python, navigate to the **Python** folder and install the necessary packages.
-
-    **Python**:
+1. If you prefer **Python**, navigate to the **Python** folder and install the necessary packages using the below commands:
 
     ```
     cd Python
-    pip install python-dotenv
-    pip install openai==1.56.2
-    pip install openai requests python-dotenv
+    python -m venv labenv
+    ./labenv/bin/Activate.ps1
+    pip install --user python-dotenv openai==1.65.2
     ```
-      > **Note:** If you receive a permission error after executing the installation command as shown in the image, please run the command below for installation.
-      >    ![](../media/L2T3S9python-0205.png)
-      > ```bash
-      > pip install --user python-dotenv
-      > pip install --user openai==1.56.2
-      > pip install --user openai requests python-dotenv
-      > ```
 
 1. In the code editor, replace the comment **Configure your data source** with code to your index as a data source for chat completion:
 
@@ -368,9 +361,9 @@ In this task, you will complete key parts of the application to enable it to use
 
     ```python
     # Configure your data source
-     text = input('\nEnter a question:\n')
+    text = input('\nEnter a question:\n')
      
-     completion = client.chat.completions.create(
+    completion = client.chat.completions.create(
         model=deployment,
         messages=[
             {
@@ -393,7 +386,7 @@ In this task, you will complete key parts of the application to enable it to use
                 }
             ],
         }
-     )
+    )
     ```
 
 1. Save the changes to the code file.
@@ -411,13 +404,11 @@ In this task, you will run the reviewed code to generate some images.
     - **C#**: `dotnet run`
     - **Python**: `python ownData.py`
 
-     >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
+        >**Note**: If you encounter any errors after running the Python script, try upgrading the OpenAI package by running the following command:
         
-    ```
-    pip install --user --upgrade openai
-    ```
-
-    > **Tip**: You can use the **Maximize panel size** (**^**) icon in the terminal toolbar to see more of the console text.
+        ```
+        pip install --user --upgrade openai
+        ```
 
 3. Review the response to the prompt `Tell me about London`, which should include an answer as well as some details of the data used to ground the prompt, which was obtained from your search service.
 
@@ -425,12 +416,8 @@ In this task, you will run the reviewed code to generate some images.
 
 ## Summary
 
-In this lab, you have accomplished the following:
+In this lab, you connected your own data to the Azure OpenAI Service for Retrieval-Augmented Generation (RAG). You observed how the base model responds to queries without any grounding data, connected your data in the chat playground, and chatted with a model grounded in your data. You also set up an application in Cloud Shell, configured it to use your Azure OpenAI resource and AI search service, and ran the application to see how it integrates with the Azure OpenAI model.
 
-- You explored **Retrieval-Augmented Generation (RAG)** by connecting your own data with the Azure OpenAI Service.
-- You **observed base model behavior** without grounding data and then connected your **Azure Blob Storage and AI Search index** to ground responses with your uploaded PDFs.
-- You configured and ran an **application in Azure Cloud Shell** to interact with the model using your custom data as the knowledge source.
-
-### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
 ![Launch Azure Portal](../media/next-page-2107.png)

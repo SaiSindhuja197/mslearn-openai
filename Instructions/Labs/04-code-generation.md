@@ -3,11 +3,13 @@
 ## Estimated Duration: 60 Minutes
 
 ## Lab Overview
+
 In this lab, you will learn how to use Azure OpenAI Service to generate, explain, and improve code using natural language prompts. You will explore code generation in the chat playground and integrate OpenAI into your app to automate code tasks. This will help you enhance productivity by simplifying coding and debugging processes.
 
 The Azure OpenAI Service models can generate code for you using natural language prompts, fixing bugs in completed code, and providing code comments. These models can also explain and simplify existing code, helping you understand what it does and how to improve it.
 
 ## Lab Objectives
+
 In this lab, you will complete the following tasks:
 
 - Task 1: Generate code in the chat playground
@@ -19,17 +21,17 @@ In this lab, you will complete the following tasks:
 
 In this task, you will examine how Azure OpenAI can generate and explain code in the Chat playground before using it in your app.
 
-1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playground** in the left pane and make sure that **my-gpt-model (2)** is selected.
+1. In [Azure AI Foundry portal](https://oai.azure.com/?azure-portal=true), navigate to the **Chat (1)** section under **Playgrounds** in the left pane and make sure that **my-gpt-model (2)** is selected.
 
    ![](../media/dev-genai-june-5.png)
    
-1. Scroll down and in the **Chat session** section, enter the following prompt and press *Enter*.
+1. In the **Chat session** section, enter the following prompt and press *Enter*.
 
     ```code
     Write a function in Python that takes a character and a string as input, and returns how many times that character appears in the string
     ```
     
-1. The model will likely respond with a function, with some explanation of what the function does and how to call it.
+1. Observe the output. The model will likely respond with a function, with some explanation of what the function does and how to call it.
 
 1. Next, send the prompt:
    ```
@@ -54,20 +56,22 @@ In this task, you will examine how Azure OpenAI can generate and explain code in
     end
     ```
 
-8. Observe the output, which explains what the function does in natural language.
+1. Observe the output, which explains what the function does.
 
-9. Submit the following prompt to get a simpler version of the function.
+1. Submit the following prompt to get a simpler version of the function.
 
    ```
    Can you simplify the function?
    ```   
 
-10. Submit the below-mentioned prompt to add comments to the code.
+1. Submit the below-mentioned prompt to add comments to the code.
 
       ```
       Add some comments to the function.
       ```
-    
+
+1. Observe the output, which includes comments explaining what each part of the function does. 
+
 ## Task 2: Set up an application in Cloud Shell
 
 In this task, you will use a short command-line application running in Cloud Shell on Azure to demonstrate how to integrate with an Azure OpenAI model. Open a new browser tab to access Cloud Shell.
@@ -92,11 +96,11 @@ In this task, you will use a short command-line application running in Cloud She
 
    > **Note:** Applications for both C# and Python have been provided, as well as sample code we'll be using in this lab.
 
-6. Open the built-in code editor, and you can observe the code files we'll be using in `sample-code`. Use the following command to open the lab files in the code editor.
+6. Use the following command to open the lab files in the code editor.
 
-      ```bash
-     code .
-      ```
+    ```bash
+    code .
+    ```
 
 ## Task 3: Configure your application
 
@@ -109,11 +113,16 @@ In this task, you will complete key parts of the application to enable it to use
     - **C#:** `appsettings.json`
     - **Python:** `.env`
 
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the name of your deployment, `my-gpt-model`. Then save the file by right-clicking on the file from the left pane and hit **Save**.
+1. In the configuration file, enter the following values for your Azure OpenAI service:
 
-    ![](../media/app-settings-c-1807.png)
+    - **Endpoint**: The endpoint URL from your Azure OpenAI resource.
+    - **Key1**: The primary key from your Azure OpenAI resource.
+    - **Deployment Name**: Set this to **my-gpt-model** (the name of your model deployment).
+    After updating these values, save the file by right-clicking it in the left pane.
 
-    ![](../media/env-p-1807.png)
+        ![](../media/app-settings-c-1807.png)
+
+        ![](../media/env-p-1807.png)
 
 1. Navigate to the folder for your preferred language and install the necessary packages. Enter the below-mentioned command to add the `Azure.AI.OpenAI` package to your project, which is necessary for integrating with Azure OpenAI services.
 
@@ -128,14 +137,8 @@ In this task, you will complete key parts of the application to enable it to use
 
       ```bash
     cd Python
-    pip install openai==1.65.2
+    pip install --user openai==1.65.2
     ```
-      
-   ![](../media/L2T3S9python-0205.png)
-      > **Note:** If you receive a permission error after executing the installation command as shown in the above image, please run the command below for installation/
-      > ```bash
-      > pip install --user openai==1.65.2
-      > ```
 
 1. Open the application code file of your preferred language and briefly observe the code. 
 
@@ -198,9 +201,8 @@ If you would like to see the full response from Azure OpenAI, you can set the `p
 
 ## Summary
 
-In this lab, you have accomplished the following:
--   Use the functionalities of the Azure OpenAI to generate and improvise code for your production applications.
+In this lab, you explored how to use Azure OpenAI Service to generate, explain, and improve code using natural language prompts. You generated code in different programming languages, explained existing code, and simplified functions using the chat playground. You also set up a command-line application in Cloud Shell, configured it to use your Azure OpenAI resource, and ran the application to automate code tasks such as adding comments, writing unit tests, and fixing bugs.
 
-### Congratulations on successfully completing the lab! Click Next >> to continue to the next lab.
+### Congratulations on completing the lab! Click Next >> to continue to the next lab.
 
 ![Launch Azure Portal](../media/next-page-2107.png)
