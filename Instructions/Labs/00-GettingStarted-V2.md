@@ -1,6 +1,6 @@
 # Develop Generative AI solutions with Azure OpenAI Service
 
-## Overall Estimated Duration: 8 Hours
+## Estimated Duration: 8 Hours
 
 ## Overview
 
@@ -24,7 +24,7 @@ Participants will learn:
 
 - **Add your data for RAG using Azure OpenAI Service:** This hands-on exercise will help you integrate your data with the Azure OpenAI Service for Retrieval-Augmented Generation (RAG) to improve AI responses. Participants will integrate data into the Azure OpenAI Service to boost AI-powered retrieval and generation.
 
-- **Explore content filters in Azure OpenAI:** This hands-on exercise demonstrates how to construct and maintain content filters in Azure OpenAI to control and refine generated outputs. Participants will learn about and implement content filters in Azure OpenAI to control and refine created material.
+- **Explore content filters in Azure OpenAI:** This hands-on exercise demonstrates how to construct and maintain content filters in Azure OpenAI to control and refine generated outputs. Participants will learn about and implement content filters in Azure OpenAI to control and refine the created material.
 
 ## Prerequisites
 
