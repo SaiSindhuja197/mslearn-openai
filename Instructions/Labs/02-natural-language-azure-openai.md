@@ -72,7 +72,7 @@ In this task, you will integrate with an Azure OpenAI model. We'll use a short c
 
         ![](../media/nlpe18.png "Create storage advanced settings")
 
-1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, **&#9723;**, and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
+1. Note that you can resize the cloud shell by dragging the separator bar at the top of the page, or by using the **&#8212;**, ⤢ and **X** icons at the top right of the page to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the [Azure Cloud Shell documentation](https://docs.microsoft.com/azure/cloud-shell/overview). 
 
 1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic version (2)**.
 
