@@ -102,9 +102,9 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
         ![](./media/e1t2p5.png)
       
-        >**Note:** gpt-4o-mini is supported only for chat completions, and it is not supported for completions API.
+        >**Note:** gpt-4o-mini is supported only for chat completions, and it is not supported for the completions API.
         
-1. This will deploy a model which you will be playing around with as you proceed.
+1. This will deploy a model that you will be playing around with as you proceed.
 
     > **Note:** You can ignore any error related to the assignment of roles to view the quota limits.
    
@@ -156,7 +156,7 @@ In this task, you'll explore a model in the Completions playground that involves
 
       ![](./media/AIFoundaryCompleteion.png)
 
-2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected, type **`Generate a quiz of 5 questions  For each question, provide me the answer options and the correct answer`** in the Prompt section **(2)** and click on **Generate (3)**.
+2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected, type **`Generate a quiz of 5 questions. For each question, provide me the answer options and the correct answer`** in the Prompt section **(2)** and click on **Generate (3)**.
 
       ![](./media/g10.png)
 
@@ -204,7 +204,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
 1. Enter the following message and response in the designated boxes:
 
-      - **User:** `What are different types of artificial intelligence?` **(1)**
+      - **User:** `What are the different types of artificial intelligence?` **(1)**
     
       - **Assistant:** `There are three main types of artificial intelligence: Narrow or Weak AI (such as virtual assistants like Siri or Alexa, image recognition software, and spam filters), General or Strong AI (AI designed to be as intelligent as a human being. This type of AI does not currently exist and is purely theoretical), and Artificial Superintelligence (AI that is more intelligent than any human being and can perform tasks that are beyond human comprehension. This type of AI is also purely theoretical and has not yet been developed).` **(2)**
 
@@ -212,7 +212,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
    
          > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-1. Save the changes by clicking on **Apply changes** and subsequently click on **Continue** to start a new session and set the behavioural context of the chat system.
+1. Save the changes by clicking on **Apply changes** and subsequently clicking on **Continue** to start a new session and set the behavioural context of the chat system.
 
       ![](./media/e1t4p6.png)
    
@@ -251,9 +251,9 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
       Most computer vision solutions are based on machine learning models that can be applied to visual input from cameras, videos, or images.*
 
-      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
+      - Image classification involves training a machine learning model to classify images based on their contents. For example, in a traffic monitoring solution, you might use an image classification model to classify images based on the type of vehicle they contain, such as taxis, buses, cyclists, and so on.*
 
-      - Object detection machine learning models are trained to classify individual objects within an image, and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicle.*
+      - Object detection machine learning models are trained to classify individual objects within an image and identify their location with a bounding box. For example, a traffic monitoring solution might use object detection to identify the location of different classes of vehicles.*
 
       - Semantic segmentation is an advanced machine learning technique in which individual pixels in the image are classified according to the object to which they belong. For example, a traffic monitoring solution might overlay traffic images with "mask" layers to highlight different vehicles using specific colors.
       ```
@@ -264,7 +264,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
    
 4. Observe the following about the prompt and parameters you used:
 
-      - The prompt specifically states that the desired output should be three multiple choice questions.
+      - The prompt specifically states that the desired output should be three multiple-choice questions.
        
       - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
@@ -272,7 +272,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
-1. In the **Setup pane**, under the **Give the model instructions and context** box, enter the system message: `You are a Python developer.` **(1)** then save the changes by clicking on **Apply changes (2)**.
+1. In the **Setup pane**, under the **Give the model instructions and context** box, enter the system message: **`You are a Python developer.`** **(1)** then save the changes by clicking on **Apply changes (2)**.
 
       ![](./media/e1t6p1.png)
 
@@ -280,7 +280,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
       ![](./media/e1t4p3.png)
 
-1. In the **Chat session** pane, click on **Clear chat** icon to clear the chat history and start a new session.
+1. In the **Chat session** pane, click on the **Clear chat** icon to clear the chat history and start a new session.
 
       ![](./media/e1t6p2.png)
 
