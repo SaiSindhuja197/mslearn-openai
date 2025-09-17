@@ -83,7 +83,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](./media/g5.png)
 
-1. Within the **Deploy model gpt-4o-mini** pop-up interface, Enter the following details:
+1. Within the **Deploy model gpt-4o-mini** pop-up interface, enter the following details:
 
       - Deployment name: **my-gpt-model (2)**
 
@@ -159,7 +159,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
       ![](./media/e1t4p2.png)
 
-1. In the **Update system message?**, click on **Continue**.
+1. In the **Update system message?** window, click on **Continue**.
 
       ![](./media/e1t4p3.png)
    

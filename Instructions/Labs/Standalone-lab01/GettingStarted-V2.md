@@ -4,25 +4,25 @@
 
 ## Overview
 
-This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, experiment with the Completions and Chat playgrounds, and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
+This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, experiment with the Chat playgrounds, and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
 
 ## Objective
 
 Understand how to deploy Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
 
-- **Get started with Azure OpenAI Service:** Gain experience in provisioning and configuring an Azure OpenAI resource, deploying an AI model (e.g., gpt-4o-mini, gpt-3.5-turbo-instruct), exploring model interactions in the Completions and Chat playgrounds, experimenting with prompts and parameters for fine-tuning, and leveraging the model's capabilities for code generation.
+- **Get started with Azure OpenAI Service:** Gain experience in provisioning and configuring an Azure OpenAI resource, deploying an AI model (e.g., gpt-4o-mini, gpt-3.5-turbo-instruct), exploring model interactions in the Chat playgrounds, experimenting with prompts and parameters for fine-tuning, and leveraging the model's capabilities for code generation.
 
 ## Pre-Requisites
 
 Participants should have basic knowledge and understanding of the following :
 
 - **Azure Portal:** For managing and provisioning Azure resources.
-- **Azure AI Foundry:** For deploying models, configuring and experimenting with their capabilities, including features such as the Completions and Chat playgrounds.
+- **Azure AI Foundry:** For deploying models, configuring and experimenting with their capabilities, including features such as the Chat playgrounds.
 
 ## Architecture
 
 This architecture allows users to leverage Azure's cloud infrastructure to deploy and interact with advanced AI models.
-The flow of the lab will be to use an existing Resource Group, then create and deploy an OpenAI model in Azure. Next, explore the model in the playground and generate code using AI. Through the Azure Portal, users manage their resources, while Azure AI Foundry provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Foundry enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
+The flow of the lab will be to use an existing Resource Group, then create and deploy an OpenAI model in Azure. Next, explore the model in the playground and generate code using AI. Through the Azure Portal, users manage their resources, while Azure AI Foundry provides the tools needed to deploy and test these models. Chat playgrounds within Azure AI Foundry enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
 
 ## Architecture Diagram:
 
@@ -34,9 +34,9 @@ The flow of the lab will be to use an existing Resource Group, then create and d
 
 - **Resource Group:** This is a container in Azure that holds related resources for your project. It helps us organize and manage services like your OpenAI model in one place.
 
-- **Azure OpenAI Service:** Hosts and manages OpenAI models like GPT-4o-mini, providing scalable access for tasks such as text completion and code generation.
+- **Azure OpenAI Service:** The managed service that brings OpenAI’s generative models, such as GPT-4o-mini and GPT-35-turbo-instruct, into the Azure ecosystem. It provides secure, scalable endpoints to use language models for tasks like chat, summarization, Q\&A, or code generation, while also supporting enterprise-grade features such as quotas, authentication, and monitoring.
 
-- **Azure AI Foundry:** Interactive environment to explore by deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
+- **Azure AI Foundry:** A unified workspace where you deploy, test, and interact with AI models. It provides tools like the Chat Playground for experimenting with conversational use cases, and configuration options for prompts, parameters, and system instructions. Foundry also integrates with observability and monitoring features, making it the primary interface for fine-tuning and experimenting with deployed models.
 
 ## Getting Started with the Lab
 
