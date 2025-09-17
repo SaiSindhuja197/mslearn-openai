@@ -1,10 +1,10 @@
 # Lunch and Learn: Get started with Azure OpenAI Service
 
-### Overall Estimated Duration: 60 minutes
+### Overall Estimated Duration: 60 Minutes
 
 ## Overview
 
-This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, experiment with the Completions and Chat playgrounds and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
+This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, experiment with the Completions and Chat playgrounds, and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
 
 ## Objective
 
@@ -22,19 +22,19 @@ Participants should have basic knowledge and understanding of the following :
 ## Architecture
 
 This architecture allows users to leverage Azure's cloud infrastructure to deploy and interact with advanced AI models.
-The flow of the lab will be to use a existing Resource Group, then create and deploy an OpenAI model in Azure. Next, explore the model in the playground and generate code using AI.Through the Azure Portal, users manage their resources, while Azure AI Foundry provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Foundry enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
+The flow of the lab will be to use an existing Resource Group, then create and deploy an OpenAI model in Azure. Next, explore the model in the playground and generate code using AI. Through the Azure Portal, users manage their resources, while Azure AI Foundry provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Foundry enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
 
 ## Architecture Diagram:
 
-![](./media/lab-01-ad.png)
+![](./media/archdiagram.png)
 
 ## Explanation of Components
 
 - **Azure Portal:** Central interface for provisioning and managing Azure OpenAI resources, including model deployment settings and resource configuration.
 
-- **Resource Group:** This is a container in Azure that holds related resources for your project, it helps us organize and manage services like your OpenAI model in one place.
+- **Resource Group:** This is a container in Azure that holds related resources for your project. It helps us organize and manage services like your OpenAI model in one place.
 
-- **Azure OpenAI Service:** Hosts and manages OpenAI models like GPT-3.5-Turbo, providing scalable access for tasks such as text completion and code generation.
+- **Azure OpenAI Service:** Hosts and manages OpenAI models like GPT-4o-mini, providing scalable access for tasks such as text completion and code generation.
 
 - **Azure AI Foundry:** Interactive environment to explore by deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
 
@@ -52,29 +52,29 @@ Once you're ready to dive in, your virtual machine and the **Guide** will be rig
  
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
  
+## Lab Guide Zoom In/Zoom Out
+
+To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
+
+   ![Manage Your Virtual Machine](./media/zoominout.png)
+
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-![Explore Lab Resources](./media/ll2.png)
+![Explore Lab Resources](./media/envtab.png)
  
 ## Utilizing the Split Window Feature
  
 For your convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
  
-![Use the Split Window Feature](./media/ll3.png)
+![Use the Split Window Feature](./media/splittab.png)
  
 ## Managing Your Virtual Machine
  
-Feel free to **start, stop, or restart (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
+Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from the **Resources (1)** tab. Your experience is in your hands!
  
-![Manage Your Virtual Machine](./media/ll4.png)
-
-## Lab Guide Zoom In/Zoom Out
-
-1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
-
-   ![Manage Your Virtual Machine](./media/labzoom-1.png)
+![Manage Your Virtual Machine](./media/resourcetab.png)
 
 ## Let's Get Started with Azure Portal
  
@@ -82,7 +82,7 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
  
       ![Launch Azure Portal](./media/sc900-image(1).png)
     
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+2. You'll see the **Sign in to continue to Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
@@ -96,11 +96,11 @@ Feel free to **start, stop, or restart (2)** your virtual machine as needed from
 
       > **Note:** If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
  
-4. If prompted to stay signed in, you can click **No**.
+4. In the **Stay signed in?** pop-up, click **No**.
 
    ![](./media/2025-07-08(1).png)
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+5. In the **Welcome to Microsoft Azure** window, click **Cancel** to skip the tour.
 
    ![](./media/2025-07-08(2).png)
 
@@ -142,6 +142,6 @@ Learner Support Contacts:
 
 Now, click on **Next** from the lower right corner to move on to the next page.
 
-![Start Your Azure Journey](./media/sc900-image(3).png)
+![Start Your Azure Journey](./media/nextpage.png)
 
 ## Happy Learning!!
