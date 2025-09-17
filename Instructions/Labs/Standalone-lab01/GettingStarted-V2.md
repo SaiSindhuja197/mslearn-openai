@@ -26,7 +26,7 @@ The flow of the lab will be to use an existing Resource Group, then create and d
 
 ## Architecture Diagram:
 
-![](./media/lab-01-ad.png)
+![](./media/archdiagram.png)
 
 ## Explanation of Components
 
@@ -34,7 +34,7 @@ The flow of the lab will be to use an existing Resource Group, then create and d
 
 - **Resource Group:** This is a container in Azure that holds related resources for your project. It helps us organize and manage services like your OpenAI model in one place.
 
-- **Azure OpenAI Service:** Hosts and manages OpenAI models like GPT-3.5-Turbo, providing scalable access for tasks such as text completion and code generation.
+- **Azure OpenAI Service:** Hosts and manages OpenAI models like GPT-4o-mini, providing scalable access for tasks such as text completion and code generation.
 
 - **Azure AI Foundry:** Interactive environment to explore by deploying and experimenting with AI models. It includes the Completions Playground for generating text and the Chat Playground for simulating conversational interactions.
 
