@@ -43,7 +43,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
       
       >**Note:** Please ensure to deploy OpenAI resource in **EAST US** Region.
 
-4. Click on **Create**.
+4. Under the **Review + submit** tab, click on **Create**.
 
       ![](./media/e1t1p4.png)
 
@@ -115,7 +115,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. Search for **gpt-35-turbo-instruct (1)**, select **gpt-35-turbo-instruct (2)** and click on **Confirm (3)**.
 
-   ![](./media/e1t2p7.png)
+   ![](./media/e1t2p8.png)
 
 1. Within the **Deploy model gpt-35-turbo-instruct** pop-up interface, click on **Customize**.
 
@@ -177,11 +177,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
    
          > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
-<<<<<<< HEAD
 1. Save the changes by clicking on **Apply changes**.
-=======
-1. Save the changes by clicking on **Apply changes** and subsequently clicking on **Continue** to start a new session and set the behavioural context of the chat system.
->>>>>>> 167efac985e4831caa6b793e48fbbb62176cb295
 
       ![](./media/e1t4p6.png)
 
