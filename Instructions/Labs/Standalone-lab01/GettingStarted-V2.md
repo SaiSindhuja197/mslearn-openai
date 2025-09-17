@@ -4,7 +4,7 @@
 
 ## Overview
 
-This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, experiment with the Completions and Chat playgrounds and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
+This lab introduces you to Azure OpenAI Service, a powerful platform that integrates OpenAI's generative AI models with the Azure cloud environment. Designed to introduce you to its core concepts and capabilities, this lab will guide you through provisioning a resource, deploying models, and interacting with various features. Learn to set up and configure an Azure OpenAI resource, deploy models, experiment with the Completions and Chat playgrounds, and acquire foundational skills in utilizing Azure's infrastructure for developing and refining AI-powered applications.
 
 ## Objective
 
@@ -22,7 +22,7 @@ Participants should have basic knowledge and understanding of the following :
 ## Architecture
 
 This architecture allows users to leverage Azure's cloud infrastructure to deploy and interact with advanced AI models.
-The flow of the lab will be to use a existing Resource Group, then create and deploy an OpenAI model in Azure. Next, explore the model in the playground and generate code using AI.Through the Azure Portal, users manage their resources, while Azure AI Foundry provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Foundry enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
+The flow of the lab will be to use an existing Resource Group, then create and deploy an OpenAI model in Azure. Next, explore the model in the playground and generate code using AI. Through the Azure Portal, users manage their resources, while Azure AI Foundry provides the tools needed to deploy and test these models. The Completions and Chat playgrounds within Azure AI Foundry enable hands-on experimentation and refinement, facilitating the development of robust AI-powered applications.
 
 ## Architecture Diagram:
 
@@ -32,7 +32,7 @@ The flow of the lab will be to use a existing Resource Group, then create and de
 
 - **Azure Portal:** Central interface for provisioning and managing Azure OpenAI resources, including model deployment settings and resource configuration.
 
-- **Resource Group:** This is a container in Azure that holds related resources for your project, it helps us organize and manage services like your OpenAI model in one place.
+- **Resource Group:** This is a container in Azure that holds related resources for your project. It helps us organize and manage services like your OpenAI model in one place.
 
 - **Azure OpenAI Service:** Hosts and manages OpenAI models like GPT-3.5-Turbo, providing scalable access for tasks such as text completion and code generation.
 
@@ -82,7 +82,7 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
  
       ![Launch Azure Portal](./media/sc900-image(1).png)
     
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
+2. You'll see the **Sign in to continue to Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
@@ -96,11 +96,11 @@ Feel free to **Start, Restart, or Stop (2)** your virtual machine as needed from
 
       > **Note:** If prompted with MFA, please follow the steps highlighted under - [Steps to Proceed with MFA Setup if Ask Later Option is Not Visible](#steps-to-proceed-with-mfa-setup-if-ask-later-option-is-not-visible)
  
-4. If prompted to stay signed in,  click **No**.
+4. In the **Stay signed in?** pop-up, click **No**.
 
    ![](./media/2025-07-08(1).png)
  
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+5. In the **Welcome to Microsoft Azure** window, click **Cancel** to skip the tour.
 
    ![](./media/2025-07-08(2).png)
 
