@@ -11,10 +11,9 @@ In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
 - Task 2: Deploy a model
-- Task 3: Explore a model in the Completions playground
-- Task 4: Use the Chat playground
-- Task 5: Explore prompts and parameters 
-- Task 6: Explore code generation
+- Task 3: Use the Chat playground
+- Task 4: Explore prompts and parameters 
+- Task 5: Explore code generation
 
 ## Task 1: Provision an Azure OpenAI resource
 
@@ -148,41 +147,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 <validation step="29d502af-cb10-4d86-80b8-e1d97420284f" />
    
-## Task 3: Explore a model in the Completions playground
-
-In this task, you'll explore a model in the Completions playground that involves interacting with the AI model to test and refine its responses using real-time input and output examples.
-
-1. In **Azure AI Foundry | Azure OpenAI** Service, in the left pane under **Playgrounds (1)**, select **Completions (2)**.
-
-      ![](./media/AIFoundaryCompleteion.png)
-
-2. In the **Completions** page, ensure your **gpt-35-turbo-instruct (1)** deployment is selected, type **`Generate a quiz of 5 questions. For each question, provide me the answer options and the correct answer`** in the Prompt section **(2)** and click on **Generate (3)**.
-
-      ![](./media/g10.png)
-
-      >**Note:** The summarised text sample consists of a *prompt* that provides some text to tell the model what kind of response is required and includes some contextual information.
-
-3. The response consists of a quiz based on the example in the prompt.
-
-      ![](./media/nls101.png)
-
-      >**Note:** The output of the chat may vary. The screenshot is provided for reference only and may not reflect the exact same output.
-
-      >**Note:** You can use the **Regenerate** button to resubmit the prompt(new changes have been made), and note that the response may vary from the original one. A generative AI model can produce new language each time it's called.
-
-4. At the bottom of the page, note the number of **Tokens** detected in the text. Tokens are the basic units of a prompt - essentially, words or word parts in the text.
-
-      ![](./media/g11.png)  
-
-5. Use the **{} View Code** button to view the code that a client application would use to submit the prompt. You can select your preferred programming language. The prompt contains the text you submitted to the model. The request is submitted to the *Completions* API for your Azure OpenAI service.
-
-      ![](./media/NO-3a.png)
-
-      ![](./media/openai-7a.png)
-    
-6. Close the **Sample Code**.
-
-## Task 4: Use the Chat playground
+## Task 3: Use the Chat playground
 
 In this task, you'll use the Chat playground to interact and test the AI model's conversational abilities through a simulated chat interface.
 
@@ -212,9 +177,17 @@ In this task, you'll use the Chat playground to interact and test the AI model's
    
          > **Note:** Few-shot examples are used to provide the model with examples of the types of responses that are expected. The model will attempt to reflect the tone and style of the examples in its own responses.
 
+<<<<<<< HEAD
+1. Save the changes by clicking on **Apply changes**.
+=======
 1. Save the changes by clicking on **Apply changes** and subsequently clicking on **Continue** to start a new session and set the behavioural context of the chat system.
+>>>>>>> 167efac985e4831caa6b793e48fbbb62176cb295
 
       ![](./media/e1t4p6.png)
+
+1. In the **Update system message?** pop-up window, click on **Continue**.
+
+      ![](./media/e1t4p3.png)
    
 1. In the query box at the bottom of the page, enter the text **`What is artificial intelligence?`**. Use the **Send** button to submit the message and view the response.
 
@@ -232,7 +205,7 @@ In this task, you'll use the Chat playground to interact and test the AI model's
 
       ![](./media/image5a.png)
 
-## Task 5: Explore prompts and parameters
+## Task 4: Explore prompts and parameters
 
 In this task, you'll explore prompts and parameters by experimenting with different inputs and settings to fine-tune the AI model's responses and behavior.
 
@@ -268,7 +241,7 @@ In this task, you'll explore prompts and parameters by experimenting with differ
        
       - The parameters include *Temperature*, which controls the degree to which response generation includes an element of randomness. The value of **0** used in your submission minimizes randomness, resulting in stable, predictable responses.
 
-## Task 6: Explore code generation
+## Task 5: Explore code generation
 
 In this task, you'll explore code generation by testing the AI model’s ability to generate and suggest code snippets based on various programming prompts and requirements.
 
@@ -276,7 +249,7 @@ In this task, you'll explore code generation by testing the AI model’s ability
 
       ![](./media/e1t6p1.png)
 
-1. On the **Update system message?**, click on **Continue**.
+1. In the **Update system message?** pop-up window, click on **Continue**.
 
       ![](./media/e1t4p3.png)
 
@@ -301,8 +274,13 @@ In this task, you'll explore code generation by testing the AI model’s ability
 ## Summary
 
 In this lab, you have accomplished the following:
-- Provisioned an Azure OpenAI resource
-- Deployed an Azure OpenAI model within the Azure OpenAI Foundry
-- Used the chat playground to utilise the functionalities of prompts, parameters, and code generation
+- Provisioned an Azure OpenAI resource.
+- Deployed an Azure OpenAI model within the Azure OpenAI Foundry.
+- Used the chat playground to utilise the functionalities of prompts, parameters, and code generation.
+
+### Conculsion
+By completing this hands-on lab, you’ve gained practical experience with Azure OpenAI Service and Azure AI Foundry. You started by provisioning an Azure OpenAI resource and deploying models that support both conversational and instruction-based scenarios. You then explored the Chat playground, experimenting with prompts, parameters, and few-shot examples to shape model responses. Finally, you tested the model’s ability to generate code, highlighting its potential for developer productivity.
+
+These exercises introduced not just the mechanics of deploying and interacting with models, but also how to configure them for different use cases, whether that’s conversational AI, educational Q\&A, or programming assistance. With this foundation, you’re now better equipped to integrate Azure OpenAI into real-world applications that demand scalability, flexibility, and secure access through the Azure ecosystem.
 
 ### You have successfully completed the Hands-on lab!
