@@ -33,15 +33,13 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     
-    - Region: **East US** **(3)**
+    - Region: **<inject key="Region" enableCopy="false"></inject> (3)**
     
     - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     
     - Pricing tier: **Standard S0 (5)**
   
       ![](./media/e1t1p3.png)
-      
-      >**Note:** Please ensure to deploy OpenAI resource in **EAST US** Region.
 
 4. Under the **Review + submit** tab, click on **Create**.
 
@@ -109,35 +107,6 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
    
     > **Note:** Azure OpenAI includes multiple models, each optimized for a different balance of capabilities and performance. In this exercise, you'll use the **gpt-4o-mini** model, which is a good model for summarizing and generating natural language and code. For more information about the available models in Azure OpenAI, see [Models](https://learn.microsoft.com/azure/cognitive-services/openai/concepts/models) in the Azure OpenAI documentation.
 
-1. Navigate back to the  **Deployments (1)** page, click on **+ Deploy model (2)** and choose **Deploy base model (3)**.
-
-    ![](./media/e1t2p7.png "Create a new deployment")    
-
-1. Search for **gpt-35-turbo-instruct (1)**, select **gpt-35-turbo-instruct (2)** and click on **Confirm (3)**.
-
-   ![](./media/e1t2p8.png)
-
-1. Within the **Deploy model gpt-35-turbo-instruct** pop-up interface, click on **Customize**.
-
-   ![](./media/g8.png)   
-   
-1. Within the **Deploy model gpt-35-turbo-instruct** pop-up interface, enter the following details:
-
-      - Deployment name: **gpt-35-turbo-instruct (1)**
-
-      - Deployment type: **Standard (2)**
-      
-      - Model version: **0914 (Default) (3)**
-      
-      - Tokens per Minute Rate Limit (thousands): **20K (4)**
-
-      - Content filter: **DefaultV2 (5)**
-      
-      - Enable dynamic quota: **Enabled (6)**
-      
-      - Click on **Deploy** **(7)**
-  
-        ![](./media/e1t2p10.png)
 
 > **Congratulations** on completing the task! Now, it's time to validate it. Here are the steps:
 - Hit the Validate button for the corresponding task.
@@ -275,7 +244,7 @@ In this lab, you have accomplished the following:
 - Used the chat playground to utilise the functionalities of prompts, parameters, and code generation.
 
 ### Conculsion
-By completing this hands-on lab, you’ve gained practical experience with Azure OpenAI Service and Azure AI Foundry. You started by provisioning an Azure OpenAI resource and deploying models that support both conversational and instruction-based scenarios. You then explored the Chat playground, experimenting with prompts, parameters, and few-shot examples to shape model responses. Finally, you tested the model’s ability to generate code, highlighting its potential for developer productivity.
+By completing this hands-on lab, you’ve gained practical experience with Azure OpenAI Service and Azure AI Foundry. You started by provisioning an Azure OpenAI resource and deploying model that support both conversational and instruction-based scenarios. You then explored the Chat playground, experimenting with prompts, parameters, and few-shot examples to shape model responses. Finally, you tested the model’s ability to generate code, highlighting its potential for developer productivity.
 
 These exercises introduced not just the mechanics of deploying and interacting with models, but also how to configure them for different use cases, whether that’s conversational AI, educational Q\&A, or programming assistance. With this foundation, you’re now better equipped to integrate Azure OpenAI into real-world applications that demand scalability, flexibility, and secure access through the Azure ecosystem.
 

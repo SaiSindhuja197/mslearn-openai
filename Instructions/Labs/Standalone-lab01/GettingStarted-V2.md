@@ -10,7 +10,7 @@ This lab introduces you to Azure OpenAI Service, a powerful platform that integr
 
 Understand how to deploy Azure OpenAI Service, enabling you to integrate and explore OpenAI's advanced models within the secure and scalable Azure platform. By the end of this lab, you will be able to:
 
-- **Get started with Azure OpenAI Service:** Gain experience in provisioning and configuring an Azure OpenAI resource, deploying an AI model (e.g., gpt-4o-mini, gpt-3.5-turbo-instruct), exploring model interactions in the Chat playgrounds, experimenting with prompts and parameters for fine-tuning, and leveraging the model's capabilities for code generation.
+- **Get started with Azure OpenAI Service:** Gain experience in provisioning and configuring an Azure OpenAI resource, deploying an AI model (e.g., gpt-4o-mini), exploring model interactions in the Chat playgrounds, experimenting with prompts and parameters for fine-tuning, and leveraging the model's capabilities for code generation.
 
 ## Pre-Requisites
 
@@ -26,7 +26,7 @@ The flow of the lab will be to use an existing Resource Group, then create and d
 
 ## Architecture Diagram:
 
-![](./media/archdiagram.png)
+![](./media/archdiagram1.png)
 
 ## Explanation of Components
 
@@ -34,7 +34,7 @@ The flow of the lab will be to use an existing Resource Group, then create and d
 
 - **Resource Group:** This is a container in Azure that holds related resources for your project. It helps us organize and manage services like your OpenAI model in one place.
 
-- **Azure OpenAI Service:** The managed service that brings OpenAI’s generative models, such as GPT-4o-mini and GPT-35-turbo-instruct, into the Azure ecosystem. It provides secure, scalable endpoints to use language models for tasks like chat, summarization, Q\&A, or code generation, while also supporting enterprise-grade features such as quotas, authentication, and monitoring.
+- **Azure OpenAI Service:** The managed service that brings OpenAI’s generative models, such as GPT-4o-mini, into the Azure ecosystem. It provides secure, scalable endpoints to use language models for tasks like chat, summarization, Q\&A, or code generation, while also supporting enterprise-grade features such as quotas, authentication, and monitoring.
 
 - **Azure AI Foundry:** A unified workspace where you deploy, test, and interact with AI models. It provides tools like the Chat Playground for experimenting with conversational use cases, and configuration options for prompts, parameters, and system instructions. Foundry also integrates with observability and monitoring features, making it the primary interface for fine-tuning and experimenting with deployed models.
 
