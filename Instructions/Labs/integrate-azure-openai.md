@@ -49,8 +49,8 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
 6. To capture the Keys and Endpoints values, on **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management** from left navigation pane..
-      - Click on copy icon next to **Key 1 (2)** and ensure to paste it in a text editor such as notepad for future reference.
-      - Also, click on copy icon next to the **Endpoint (3)** API URL and paste it in a text editor such as notepad for later use.
+      - Click on the copy icon next to **Key 1 (2)** and ensure to paste it in a text editor such as Notepad for future reference.
+      - Also, click on the copy icon next to the **Endpoint (3)** API URL and paste it into a text editor such as Notepad for later use.
 
            ![](../media/Update-5.png "Keys and Endpoints")
 
@@ -229,7 +229,7 @@ For this task, you'll complete some key parts of the application to enable using
     
     - Python: `.env`
     
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the blank space in the file text editor and hit **Save** or press **Ctrl + C** to save.
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the blank space in the file text editor and hitting **Save** or pressing **Ctrl + C** to save.
 
     - **C#:**
      
@@ -256,7 +256,8 @@ For this task, you'll complete some key parts of the application to enable using
     cd Python
     python -m venv labenv
     source ./labenv/bin/activate
-    pip install python-dotenv openai==1.65.2 --user
+    pip install python-dotenv openai==1.65.2
+    pip install --upgrade pip
     ```
 
 1. Navigate to your preferred language folder, replace the comment **Add Azure OpenAI package** with code to add the Azure OpenAI SDK library:
@@ -422,7 +423,7 @@ For this task, you'll complete some key parts of the application to enable using
       
       }
       
-      // Define the function that gets the response from Azure OpenAI endpoint
+      // Define the function that gets the response from the Azure OpenAI endpoint
       private static void GetResponseFromOpenAI(string systemMessage, string userMessage)  
       {   
           Console.WriteLine("\nSending prompt to Azure OpenAI endpoint...\n\n");
@@ -511,7 +512,7 @@ For this task, you'll complete some key parts of the application to enable using
           except Exception as ex:
               print(ex)
       
-      # Define the function that will get the response from Azure OpenAI endpoint
+      # Define the function that will get the response from the Azure OpenAI endpoint
       async def call_openai_model(system_message, user_message, model, client):
           # Get response from Azure OpenAI
           messages = [
@@ -613,7 +614,7 @@ Now that your app has been set up, you can just run it to send your request to y
 
 In this lab, you have accomplished the following:
 -   Provision an Azure OpenAI resource
--   Deploy an OpenAI model within the Azure OpenAI studio
+-   Deploy an OpenAI model within the Azure OpenAI Studio
 -   Integrate Azure OpenAI models into your applications
 
 ### You have successfully completed the lab.
