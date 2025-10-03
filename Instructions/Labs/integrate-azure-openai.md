@@ -91,7 +91,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/Uptask2-4.png)
 
-1. Enter the details as mentioned below, then click on **Deploy (9):**
+1. Enter the details as mentioned below, then click on **Deploy (8):**
 
     | Settings | Action |
     | -- | -- |
@@ -167,9 +167,9 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
     cd mslearn-openai/Labfiles/01-app-develop
     ```
 
-    Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
+1. Applications for both C# and Python have been provided, as well as a sample text file you'll use to test the summarization. Both apps feature the same functionality.
    
-    Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
+1. Open the built-in code editor, and observe the text file that you'll be summarizing with your model located at `text-files/sample-text.txt`. Use the following command to open the lab     files in the code editor.
    
    ```bash
     code .
@@ -229,7 +229,7 @@ For this task, you'll complete some key parts of the application to enable using
     
     - Python: `.env`
     
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the blank space in the file text editor and hit **Save**.
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the blank space in the file text editor and hit **Save** or press **Ctrl + C** to save.
 
     - **C#:**
      
