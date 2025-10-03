@@ -73,11 +73,11 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
 
-    ![](../media/itp9.png)
+    ![](../media/Uptask2-0.png)
 
-1. In the Azure OpenAI resource pane, click on **Go to Azure OpenAI Studio** it will navigate to **Azure AI Studio**.
+1. In the Azure OpenAI resource **Overview (1)** page, click on **Go to Azure AI Foundry portal (2)**.
 
-   ![](../media/update08.png)
+   ![](../media/Uptask2-1.png)
 
 1. From the left navigation pane, select **Deployments (1)** under Shared resources, click on **+ Deploy model (2)**, Choose **Deploy base model (3)**.
 
@@ -95,13 +95,13 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
     | Settings | Action |
     | -- | -- |
-    | **Deployment name** | text-turbo (1) |
-    | **Deployment type (3)** | Standard |
-    | **Model version upgrade policy (4)** | Upgrade once new default version becomes available. |
-    | **Model version (5)** | 2024-11-20 |
-    | **Tokens per Minute Rate Limit (thousands) (6)** | 10K |
-    | **Content Filter (7)** | DefaultV2 |
-    | **Enable dynamic quota(8)** | Enabled |
+    | Deployment name | **text-turbo** **(1)** |
+    | Deployment type | **Standard** **(2)** |
+    | Model version upgrade policy | **Upgrade once new default version becomes available.** **(3)** |
+    | Model version | **2024-11-20** **(4)** |
+    | Tokens per Minute Rate Limit (thousands) | **10K** **(5)** |
+    | Content filter | **DefaultV2** **(6)**|
+    | Enable dynamic quota | **Enabled** **(7)** |
 
     ![](../media/Text-turbo.png)
 
@@ -119,30 +119,32 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
 In this task, you will integrate with an Azure OpenAI model by using a short command-line application running in Cloud Shell on Azure. Open a new browser tab to work with Cloud Shell.
 
-1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** (*Cloud Shell*) button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
+1. In the [Azure portal](https://portal.azure.com?azure-portal=true), select the **[>_]** **(Cloud Shell)** button at the top of the page to the right of the search box. A Cloud Shell pane will open at the bottom of the portal.
 
-   ![](../media/cloudshell-launch-portal.png#lightbox)
+    ![](../media/Uptask3-0.png)
 
 1. The first time you open the Cloud Shell, you may be prompted to choose the type of shell you want to use (*Bash* or *PowerShell*). Select **Bash**. If you don't see this option, skip the step.
 
-1. Within the Getting Started pane, select **Mount storage account**, select your **Storage account subscription** from the dropdown and click **Apply**.
+    ![](../media/Uptask3-1.png)
 
-   ![](../media/cloudshell-getting-started.png)
+1. On the Getting started pane, select **Mount storage account (1)**, select your **Storage account subscription (2)** from the dropdown and click **Apply (3)**.
 
-1. Within the **Mount storage account** pane, select **I want to create a storage account** and click **Next**.
+    ![](../media/Uptask3-2.png)
 
-   ![](../media/cloudshell-mount-strg-account.png)
+1. On the **Mount storage account** pane, select **I want to create a storage account (1)** and click **Next (2)**.
 
-1. Within the **Advanced settings** pane, enter the following details:
+    ![](../media/Uptask3-3.png)
 
-   - **Subscription**: Default- Choose the only existing subscription assigned for this lab (1).
-   - **CloudShell region**: <inject key="Region" enableCopy="false" /> (2)
-   - **Resource group**: Select openai-<inject key="DeploymentID" enableCopy="false"></inject>(3)
-   - **Storage Account Name**: storage<inject key="DeploymentID" enableCopy="false"></inject>(4)
-   - **File share**: Create a new file share named **none** (5)
-   - Click **Create Storage** (6)
+1. Within the **Create storage account** pane, enter the following details:
 
-     ![](../media/cloudshell-advanced-settings.png "Create storage advanced settings")
+   - **Subscription**: Select the existing subscription assigned for this lab **(1)**.
+   - **CloudShell region**: **<inject key="Region" enableCopy="false" /> (2)**
+   - **Resource group**: Select **openai-<inject key="DeploymentID" enableCopy="false"></inject> (3)**
+   - **Storage Account Name**: **storage<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+   - **File share**: Create a new file share named **none** **(5)**
+   - Click **Create** **(6)**
+
+     ![](../media/Uptask3-4.png)
 
 1. Make sure the type of shell indicated on the top left of the Cloud Shell pane is switched to *Bash*. If it's *PowerShell*, switch to *Bash* by using the drop-down menu.
 
@@ -150,7 +152,7 @@ In this task, you will integrate with an Azure OpenAI model by using a short com
 
 1. Once the terminal opens, click on **Settings (1)** and select **Go to Classic Version (2)**.
 
-    ![](../media/nlpe19.png)
+    ![](../media/Uptask3-5.png)
 
 1. Once the terminal starts, enter the following command to download the sample application and save it to a folder called `azure-openai`.
 
@@ -227,7 +229,7 @@ For this task, you'll complete some key parts of the application to enable using
     
     - Python: `.env`
     
-1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `my-gpt-model`. Then save the file by right-clicking on the blank space in the file text editor and hit **Save**.
+1. Update the configuration values to include the **endpoint** and **key** from the Azure OpenAI resource you created, as well as the model name that you deployed, `text-turbo`. Then save the file by right-clicking on the blank space in the file text editor and hit **Save**.
 
     - **C#:**
      
