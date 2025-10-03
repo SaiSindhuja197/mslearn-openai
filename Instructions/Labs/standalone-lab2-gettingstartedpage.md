@@ -1,6 +1,6 @@
 # Lunch and Learn: Integrate Azure OpenAI into your App
 
-### Overall Estimated Duration: 60 minutes
+### Overall Estimated Duration: 60 Minutes
 
 ## Overview
 
@@ -56,65 +56,57 @@ Once you're ready to dive in, your virtual machine and **Guide** will be right a
  
 ![Access Your VM and Lab Guide](../media/itp8.png)
 
-### Virtual Machine & Lab Guide
- 
+## Virtual Machine & Lab Guide
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
 
 ## Exploring Your Lab Resources
- 
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
- 
-![Explore Lab Resources](./Standalone-lab01/media/ll2.png)
- 
+
+![](../media/GettingStarted-0.png)
+
 ## Utilizing the Split Window Feature
- 
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the top right corner.
- 
-![Use the Split Window Feature](./Standalone-lab01/media/ll3.png)
- 
+
+![](../media/GettingStarted-1.png)
+
 ## Managing Your Virtual Machine
- 
-From the **Resources (1)** tab feel free to **start, stop, or restart (2)** your virtual machine as needed . Your experience is in your hands!
- 
-![Manage Your Virtual Machine](./Standalone-lab01/media/ll4.png)
- 
+Feel free to **start, restart, or stop (2)** your virtual machine as needed from the **Resources (2)** tab. Your experience is in your hands!
+
+![](../media/GettingStarted-2.png)
+
 ## Lab Guide Zoom In/Zoom Out
- 
-To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-![Manage Your Virtual Machine](../media/ZOOMINOUT.png)
+To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-## Lab Validation
-
-1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
-
-   ![Inline Validation](../media/itg5.png)
-
-1. If you need any assistance, please contact us at Cloudlabs-support@spektrasystems.com.
+![](../media/GettingStarted-3.png)
 
 ## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
 
-   ![Launch Azure Portal](../media/sc900-image(1).png)
+   ![](../media/GettingStarted-7.png)
 
-2. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
- 
-   - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
- 
-       ![Enter Your Username](../media/sc900-image-1.png)
- 
-3. Next, provide your password:
- 
-   - **Password:** <inject key="AzureAdUserPassword"></inject>
- 
-       ![Enter Your Password](../media/sc900-image-2.png)
- 
-4. If prompted to stay signed in, you can click **No**.
- 
-5. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
-  
-   ![Click on cancel](../media/imageae.png)
+1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. In that enter the following email/username, and click on **Next (2)**. 
+
+   * **Email/Username**: <inject key="AzureAdUserEmail"></inject> **(1)**
+   
+     ![](../media/GettingStarted-4.png)
+     
+1. Now enter the following password and click on **Sign in (2)**.
+   
+   * **Password**: <inject key="AzureAdUserPassword"></inject> **(1)**
+   
+     ![](../media/GettingStarted-5.png)
+       
+1. If prompted to stay signed in, you can click **No**.
+    
+     ![](../media/GettingStarted-6.png)
+
+1. If a **Welcome to Microsoft Azure** popup window appears, click **Cancel** to skip the tour.
+
+1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
+
+1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
 
 ## Support Contact
  
