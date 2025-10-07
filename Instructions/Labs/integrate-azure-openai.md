@@ -71,7 +71,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/Update-0.png)
 
-1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (2).**
 
     ![](../media/Uptask2-0.png)
 
@@ -233,11 +233,11 @@ For this task, you'll complete some key parts of the application to enable using
 
     - **C#:**
      
-        ![](../media/L2T3S4-CS.png)   
+        ![](../media/CSharp.png)   
 
     - **Python:**
      
-        ![](../media/L2T3S4-py.png) 
+        ![](../media/Python.png) 
 
     > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
