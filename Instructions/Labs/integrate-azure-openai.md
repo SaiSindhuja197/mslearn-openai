@@ -33,7 +33,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
     - Subscription: Keep **pre-assigned subscription (1)**.
     - Resource group: **openai-<inject key="DeploymentID" enableCopy="false"></inject> (2)**
     - Region: Select **<inject key="Region" enableCopy="false" /> (3)**
-    - Name: **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
+    - Name: **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (4)**
     - Pricing tier: **Standard S0 (5)**
     -  Click on **Next** **(6)**
   
@@ -47,7 +47,7 @@ In this task, you'll create an Azure resource in the Azure portal, selecting the
 
      ![](../media/Update-4.png "Create Azure OpenAI resource")
 
-6. To capture the Keys and Endpoints values, on **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
+6. To capture the Keys and Endpoints values, on **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject>** blade:
       - Select **Keys and Endpoint (1)** under **Resource Management** from left navigation pane..
       - Click on the copy icon next to **Key 1 (2)** and ensure to paste it in a text editor such as Notepad for future reference.
       - Also, click on the copy icon next to the **Endpoint (3)** API URL and paste it into a text editor such as Notepad for later use.
@@ -71,7 +71,7 @@ In this task, you'll deploy a specific AI model instance within your Azure OpenA
 
    ![](../media/Update-0.png)
 
-1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab02-<inject key="DeploymentID" enableCopy="false"></inject>**
+1. On **AI Foundry | Azure OpenAI (1)** blade, select **OpenAI-Lab01-<inject key="DeploymentID" enableCopy="false"></inject> (2).**
 
     ![](../media/Uptask2-0.png)
 
@@ -233,11 +233,11 @@ For this task, you'll complete some key parts of the application to enable using
 
     - **C#:**
      
-        ![](../media/L2T3S4-CS.png)   
+        ![](../media/CSharp.png)   
 
     - **Python:**
      
-        ![](../media/L2T3S4-py.png) 
+        ![](../media/Python.png) 
 
     > **Note:** You can get the Azure OpenAI endpoint and key values from the Azure OpenAI resource's **Key and Endpoint** section under **Resource Management**.
 
