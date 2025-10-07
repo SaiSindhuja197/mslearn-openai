@@ -54,7 +54,7 @@ Once the environment is provisioned, a virtual machine (JumpVM) and lab guide wi
  
 Once you're ready to dive in, your virtual machine and **Guide** will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/itp8.png)
+![Access Your VM and Lab Guide](../media/GettingStarted-8.png)
 
 ## Virtual Machine & Lab Guide
 Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
@@ -97,6 +97,10 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
    * **Password**: <inject key="AzureAdUserPassword"></inject> **(1)**
    
      ![](../media/GettingStarted-5.png)
+
+     >**Note:** If prompted to Enter Temporary Access Pass, enter the following **Password**: <inject key="AzureAdUserPassword"></inject> **(1)** and click on **Sign in (2)**.
+
+     ![](../media/GS-0.png) 
        
 1. If prompted to stay signed in, you can click **No**.
     
