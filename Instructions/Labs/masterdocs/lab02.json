@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Lab 02: Integrate Azure OpenAI into your app",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/02-natural-language-azure-openai.md",
+        "Order": 2
+      }
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Lab 07: Explore content filters in Azure OpenAI",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/07-content-filters-azureOpenAI.md",
+        "Order": 2
+      }
+    ]
+  }
+]

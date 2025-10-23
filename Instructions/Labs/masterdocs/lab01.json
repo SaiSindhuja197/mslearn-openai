@@ -1,0 +1,17 @@
+[
+  {
+    "Name": "Lab 01: Develop AI solutions with Azure OpenAI Studio",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/00-GettingStarted-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/01-get-started-azure-openai.md",
+        "Order": 2
+      }
+    ]
+  }
+]

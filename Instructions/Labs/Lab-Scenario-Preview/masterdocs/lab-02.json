@@ -1,0 +1,13 @@
+[
+  {
+    "Name": "Lab Scenario Preview: Azure-OpenAI: Build natural language solutions with Azure OpenAI Service",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai/tree/prod",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/prod/Instructions/Labs/Lab-Scenario-Preview/lab-02.md",
+        "Order": 1
+      }
+    ]
+  }
+]

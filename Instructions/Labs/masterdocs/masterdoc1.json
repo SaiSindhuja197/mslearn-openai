@@ -1,0 +1,59 @@
+[
+  {
+    "Name": "Hands-on Lab: Get started with OpenAI and build natural language solution",
+    "Language": "English",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Instructor-track/Instructions/Labs/00-GettingStarted-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Instructor-track/Instructions/Labs/01-get-started-azure-openai.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/refs/heads/Instructor-track/Instructions/Labs/02-natural-combined.md",
+        "Order": 3
+      }
+    ]
+  },
+  {
+    "Name": "Hands-on Lab: Get started with OpenAI and build natural language solution",
+    "Language": "Spanish",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Spanish-Content/Instructions/Labs/00-GettingStarted-V2.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Spanish-Content/Instructions/Labs/01-get-started-azure-openai.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Spanish-Content/Instructions/Labs/02-combined.md",
+        "Order": 3
+      }
+    ]
+  },
+  {
+    "Name": "Hands-on Lab: Get started with OpenAI and build natural language solution",
+    "Language": "Portuguese",
+    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "Files": [
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Portuguese-Content/Instructions/Labs/00-GettingStarted-V2-Portuguese.md",
+        "Order": 1
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Portuguese-Content/Instructions/Labs/01-get-started-azure-openai-Portuguese.md",
+        "Order": 2
+      },
+      {
+        "RawFilePath": "https://raw.githubusercontent.com/CloudLabs-MOC/mslearn-openai/Portuguese-Content/Instructions/Labs/02-natural-language-azure-openai-Portuguese.md",
+        "Order": 3
+      }
+    ]
+  }
+]
