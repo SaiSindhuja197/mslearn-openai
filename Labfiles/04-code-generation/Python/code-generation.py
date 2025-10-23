@@ -2,21 +2,34 @@ import os
 from dotenv import load_dotenv
 
 # Add OpenAI import
+from openai import AzureOpenAI
 
 # Set to True to print the full response from OpenAI for each call
 printFullResponse = False
 
 def main(): 
-        
     try: 
-    
         # Get configuration settings 
         load_dotenv()
         azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
         azure_oai_key = os.getenv("AZURE_OAI_KEY")
         azure_oai_model = os.getenv("AZURE_OAI_DEPLOYMENT")
         
+        # Print environment variables to verify (optional debug)
+        print("Endpoint:", azure_oai_endpoint)
+        print("Key:", azure_oai_key[:5] + "..." + azure_oai_key[-5:])  # Masked display
+        print("Deployment:", azure_oai_model)
+
         # Set OpenAI configuration settings
+        global client
+        client = AzureOpenAI(
+            api_key=azure_oai_key,
+            azure_endpoint=azure_oai_endpoint,
+            api_version="2024-06-01"  # Ensure this matches your resource version
+        )
+
+        # Ensure 'result' folder exists
+        os.makedirs("result", exist_ok=True)
 
         while True:
             print('\n1: Add comments to my function\n' +
@@ -39,7 +52,7 @@ def main():
             elif command.lower() == 'quit':
                 print('Exiting program...')
                 break
-            else :
+            else:
                 print("Invalid input. Please try again.")
 
     except Exception as ex:
@@ -51,15 +64,32 @@ def call_openai_model(prompt, model):
     user_message = prompt
 
     # Build the messages array
+    messages = [
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": user_message},
+    ]
+
+    # Call the Azure OpenAI model
+    response = client.chat.completions.create(
+        model=model,  # Use the model parameter passed
+        messages=messages,
+        temperature=0.7,
+        max_tokens=1000
+    )
     
-    # Print the response to the console, if desired
-    if printFullResponse:
-        print(response)
+    # Extract response content
+    output = response.choices[0].message.content
+
+    # Print the response to the console
+    print("\n--- Response Start ---\n")
+    print(output)
+    print("\n--- Response End ---\n")
 
     # Write the response to a file
-    results_file = open(file="result/app.txt", mode="w", encoding="utf8")
-    results_file.write(response.choices[0].message.content)
-    print("\nResponse written to result/app.txt\n\n")
+    with open("result/app.txt", "w", encoding="utf8") as results_file:
+        results_file.write(output)
+    
+    print("Response written to result/app.txt\n")
 
 if __name__ == '__main__': 
     main()

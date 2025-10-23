@@ -1,4 +1,4 @@
-﻿// Implicit using statements are included
+// Implicit using statements are included
 using System.Text;
 using System.Text.Json;
 using Microsoft.Extensions.Configuration;
@@ -6,6 +6,7 @@ using Microsoft.Extensions.Configuration.Json;
 using Azure;
 
 // Add Azure OpenAI package
+
 
 // Build a config object and retrieve user settings.
 IConfiguration config = new ConfigurationBuilder()
@@ -62,6 +63,7 @@ async Task GetResponseFromOpenAI(string fileText)
     
     // Initialize the Azure OpenAI client
     
+
     // Read text file into system and user prompts
     string[] prompts = System.IO.File.ReadAllLines(fileText);
     string systemPrompt = prompts[0].Split(":", 2)[1].Trim();
@@ -72,15 +74,18 @@ async Task GetResponseFromOpenAI(string fileText)
     Console.WriteLine("User prompt: " + userPrompt);
     
     // Create chat completion options
-    
 
     
-    // Write response full response to console, if requested
+    // Write full response if needed
     if (printFullResponse)
     {
         Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
     }
 
-    // Write response to console
-    Console.WriteLine($"\nResponse: {completion}\n\n");
-}  
+    // Write the first choice's message
+    foreach (var choice in completions.Choices)
+    {
+        Console.WriteLine($"\nResponse: {choice.Message.Content}\n\n");
+    }
+}
+

@@ -1,11 +1,12 @@
-﻿// Implicit using statements are included
+// Implicit using statements are included
 using System.Text;
 using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Configuration.Json;
 using Azure;
-
+using Azure.AI.OpenAI;
 // Add Azure OpenAI package
+
 
 // Build a config object and retrieve user settings.
 IConfiguration config = new ConfigurationBuilder()
@@ -30,9 +31,9 @@ do {
     switch (command) {
         case "1":
             string functionFile = System.IO.File.ReadAllText("../sample-code/function/function.cs");
-            string commentPrompt = "Add comments to the following function. Return only the commented code.\n---\n" + functionFile;
+            string ChatCompletionsOptions = "Add comments to the following function. Return only the commented code.\n---\n" + functionFile;
             
-            await GetResponseFromOpenAI(commentPrompt);
+            await GetResponseFromOpenAI(ChatCompletionsOptions);
             break;
         case "2":
             functionFile = System.IO.File.ReadAllText("../sample-code/function/function.cs");
@@ -59,30 +60,38 @@ async Task GetResponseFromOpenAI(string prompt)
 {   
     Console.WriteLine("\nCalling Azure OpenAI to generate code...\n\n");
 
-    if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName) )
+    if(string.IsNullOrEmpty(oaiEndpoint) || string.IsNullOrEmpty(oaiKey) || string.IsNullOrEmpty(oaiModelName))
     {
         Console.WriteLine("Please check your appsettings.json file for missing or incorrect values.");
         return;
     }
-    
-    // Initialize the Azure OpenAI client
-    
-    // Define chat prompts
+
+    var credentials = new AzureKeyCredential(oaiKey);
+    var chatClient = new OpenAIClient(new Uri(oaiEndpoint), credentials);
+
     string systemPrompt = "You are a helpful AI assistant that helps programmers write code.";
     string userPrompt = prompt;
 
-    // Create chat completion options
-    
+    var chatOptions = new ChatCompletionsOptions()
+    {
+        Temperature = 0.7f,
+        MaxTokens = 800
+    };
 
-    // Write full response to console, if requested
+    chatOptions.Messages.Add(new ChatMessage(ChatRole.System, systemPrompt));
+    chatOptions.Messages.Add(new ChatMessage(ChatRole.User, userPrompt));
+
+    Response<ChatCompletions> completions = await chatClient.GetChatCompletionsAsync(oaiModelName, chatOptions);
+
+    string resultText = completions.Value.Choices[0].Message.Content;
+    
     if (printFullResponse)
     {
-        Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions, new JsonSerializerOptions { WriteIndented = true })}\n\n");
+        Console.WriteLine($"\nFull response: {JsonSerializer.Serialize(completions.Value, new JsonSerializerOptions { WriteIndented = true })}\n\n");
     }
 
-    // Write the file.
-    System.IO.File.WriteAllText("result/app.txt", completion);
+    Console.WriteLine($"\nResponse:\n{resultText}\n");
 
-    // Write response to console
+    System.IO.File.WriteAllText("result/app.txt", resultText);
     Console.WriteLine($"\nResponse written to results/app.txt\n\n");
-}  
+}

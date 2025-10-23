@@ -33,16 +33,18 @@ namespace generate_image
                 // Make the initial call to start the job
                 using (var client = new HttpClient())
                 {
-                    var contentType = new MediaTypeWithQualityHeaderValue("application/json");
-                    var api = "openai/images/generations:submit?api-version=2023-06-01-preview";
+                    var contentType = new MediaTypeWithQualityHeaderValue("application/json");                   
+                    var deployment = configuration["AzureOAIDeployment"];
+                    var api = $"/openai/deployments/{deployment}/images/generations?api-version=2025-04-01-preview";
                     client.BaseAddress = new Uri(aoaiEndpoint);
                     client.DefaultRequestHeaders.Accept.Add(contentType);
                     client.DefaultRequestHeaders.Add("api-key", aoaiKey);
+                    Console.WriteLine("Calling URL: " + client.BaseAddress + api);                     
                     var data = new
                     {
                         prompt=prompt,
                         n=1,
-                        size="512x512"
+                        size="1024x1024"
                     };
 
                     var jsonData = JsonSerializer.Serialize(data);
@@ -50,7 +52,18 @@ namespace generate_image
                     var init_response = await client.PostAsync(api, contentData); 
 
                     // Get the operation-location URL for the callback
-                    var callback_url = init_response.Headers.GetValues("operation-location").FirstOrDefault();
+                    
+                    if (!init_response.Headers.TryGetValues("operation-location", out var headerValues))
+                    {
+                        Console.WriteLine("Error: 'operation-location' header not found in the response.");
+                        Console.WriteLine("Status Code: " + init_response.StatusCode);
+                        string errorContent = await init_response.Content.ReadAsStringAsync();
+                        Console.WriteLine("Response Content: " + errorContent);
+                        return;
+                    }
+
+                    var callback_url = headerValues.FirstOrDefault();
+
 
                     // Poll the callback URL until the job has succeeeded (or 100 attempts)
                     var response = await client.GetAsync(callback_url); 
