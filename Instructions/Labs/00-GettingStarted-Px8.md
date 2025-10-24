@@ -40,7 +40,7 @@ Welcome to the **Introduction to Azure OpenAI for NLP** Workshop!. In this lab, 
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
  
-![Access Your VM and Lab Guide](../media/getting-started-eng-openai-1.png)
+![Access Your VM and Lab Guide](../media/GS1.png)
 
 ## Virtual Machine & Lab Guide
  
@@ -50,13 +50,13 @@ Your virtual machine is your workhorse throughout the workshop. The lab guide is
  
 To get a better understanding of your lab resources and credentials, you can navigate to the **Environment** tab.
  
-![Explore Lab Resources](../media/exp-lab-resources.png)
+![Explore Lab Resources](../media/GS3i.png)
 
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-![Use the Split Window Feature](../media/split-feature-new.png)
+![Use the Split Window Feature](../media/GS5i.png)
  
 ## Managing Your Virtual Machine
  
@@ -74,29 +74,33 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 
 After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-![Inline Validation](../media/getting-started-eng-openai-4.png)
+![Inline Validation](../media/GS6.png)
 
 ## Let's Get Started with Azure Portal
  
 1. In the LabVM, click on the **Azure portal** shortcut of the Microsoft Edge browser, which is created on the desktop.
 
-   ![Inicie el Portal de Azure](../media/sc900-image(1).png)
+   ![Inicie el Portal de Azure](../media/GS2.png)
  
 1. You'll see the **Sign into Microsoft Azure** tab. Here, enter your credentials:
  
    - **Email/Username:** <inject key="AzureAdUserEmail"></inject>
  
-       ![Enter Your Username](../media/sc900-image-1.png)
+       ![Enter Your Username](../media/GS3.png)
  
 4. Next, provide your password:
  
    - **Password:** <inject key="AzureAdUserPassword"></inject>
  
-       ![Enter Your Password](../media/sc900-image-2.png)
+       ![Enter Your Password](../media/GS4.png)
  
 7. If prompted to **Stay Signed in**, you can click **No**.
  
+    ![Use the Split Window Feature](../media/GS5.png)
+    
 8. If a **Welcome to Microsoft Azure** page appears, simply click **Cancel** to skip the tour.
+
+    ![Welcome Page](../media/Welcome(Eng).png)
 
 ## Support Contact
 
