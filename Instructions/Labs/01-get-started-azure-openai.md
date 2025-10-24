@@ -11,10 +11,9 @@ In this lab, you will complete the following tasks:
 
 - Task 1: Provision an Azure OpenAI resource
 - Task 2: Deploy a model
-- Task 3: Explore a model in the Completions playground
-- Task 4: Use the Chat playground
-- Task 5: Explore prompts and parameters 
-- Task 6: Explore code generation
+- Task 3: Use the Chat playground
+- Task 4: Explore prompts and parameters 
+- Task 5: Explore code generation
 
 ## Task 1: Provision an Azure OpenAI resource
 
