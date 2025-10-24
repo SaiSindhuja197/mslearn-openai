@@ -2,7 +2,7 @@
   {
     "Name": "Hands-on Lab: Get started with OpenAI and build natural language solution",
     "Language": "English",
-    "BaseURL": "https://github.com/CloudLabs-MOC/mslearn-openai",
+    "BaseURL": "https://github.com/SaiSindhuja197/mslearn-openai",
     "Files": [
       {
         "RawFilePath": "https://raw.githubusercontent.com/SaiSindhuja197/mslearn-openai/Instructor-track/Instructions/Labs/00-GettingStarted-Px8.md",
